@@ -1,0 +1,21 @@
+form {
+    display: flex;
+}
+form input {
+    width: 100%;
+    padding: 0 10px;
+    color: green;
+    outline-color: blue;
+}
+form input:hover {
+    color: red;
+}
+form button {
+    text-transform: uppercase;
+    color: green;
+    padding: 0 10px;
+    height: 2em;
+}
+form button:hover {
+    color: red;
+}
