@@ -1,0 +1,7 @@
+form > fieldset {
+    padding: 30px 25px 45px;
+}
+
+form > fieldset fieldset {
+    padding: 22px 15px 30px;
+}
