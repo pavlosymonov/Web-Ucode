@@ -1,0 +1,27 @@
+.weather-container {
+    display: inline-block;
+}
+
+.day-item {
+    display: inline-block;
+    text-align: center;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    width: 112px;
+}
+
+.day-date {
+    background: #4095B5;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.degree {
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.weather-state {
+    width: 85%;
+    padding: 7px 0 0;
+}
