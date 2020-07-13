@@ -25,3 +25,7 @@
     width: 85%;
     padding: 7px 0 0;
 }
+
+.day-item:hover {
+    box-shadow: 0 0 7px 0 rgba(0,0,0,.7);
+}
