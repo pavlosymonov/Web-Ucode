@@ -1,0 +1,17 @@
+* {
+    transition: all .1s ease;
+}
+
+.inf-gantlet-img {
+    width: 150px;
+    display: block;
+}
+
+.man {
+    width: 45px;
+}
+
+.inf-gantlet-img:hover ~ table .row:nth-child(odd) td:nth-child(odd),
+.inf-gantlet-img:hover ~ table .row:nth-child(even) td:nth-child(even) {
+    opacity: 0;
+}
