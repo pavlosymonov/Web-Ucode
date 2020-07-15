@@ -1,0 +1,28 @@
+ul {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: calc(25% - 30px) calc(25% - 30px) calc(25% - 30px) calc(25% - 30px);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.content-block {
+    width: 100%;
+    border: 1px solid #eee;
+    padding: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+@media screen and (max-width: 1024px) {
+    ul {
+        grid-template-columns: auto auto;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+}
