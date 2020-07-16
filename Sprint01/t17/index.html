@@ -9,7 +9,8 @@
 </head>
 <body>
   <section>
-    <h2>HTML<br><br>BLOCK ELEMENTS</h2>
+    <h1>HTML</h1>
+    <h2>BLOCK ELEMENTS</h2>
     <ul>
       <li class="content-block">
         div<br>
@@ -36,37 +37,170 @@
         specifies the main content of a document<br>
         ---<br>
         <code>&lt;main&gt;Content&lt;/main&gt;<br></code>
+      </li>
+      <li class="content-block">
+        p<br>
+        The tag defines a text paragraph.<br>
+        ---<br>
+        <code>&lt;p&gt;Lorem, ipsum.&lt;/p&gt;<br></code>
+        <p style="margin: 20px 0 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, molestiae!</p>
+      </li>
+      <li class="content-block">
+        section<br>
+        Section tag defines the section of documents such as chapters, headers, footers or any other sections.<br>
+        ---<br>
+        <code>&lt;section&gt;Section sontent&lt;/section&gt;<br></code>
+      </li>
+      <li class="content-block">
+        video<br>
+        The tag is used to embed video content in a document, such as a movie clip or other video streams.<br>
+        <code>&lt;video&gt;<br>
+          &nbsp;&lt;source src="" type=""&gt;<br>
+          &lt;/video&gt;</code><br>
+      </li>
+      <li class="content-block">
+        article<br>
+        The tag specifies independent, self-contained content.<br>
+        Forum post, Blog post, News story<br>
+        <code>&lt;article&gt;Content&lt;/article&gt;<br></code>
       </li>
     </ul>
   </section>
   <section>
-    <h2>CSS<br><br>BLOCK ELEMENTS</h2>
+    <h2>INLINE ELEMENTS</h2>
     <ul>
       <li class="content-block">
-        div<br>
-        defines a division or a section in an HTML document<br>
-        align,title<br>
-        <code>&lt;div&gt;...&lt;/div&gt;<br></code>
-        <div style="color:blue; border: 1px solid #000; margin: 15px 0 20px;">Lorem ipsum.</div>
+        a<br>
+        Defines a hyperlink, which is used to link from one page to another.<br>
+        Attr: href<br>
+        <code>&lt;a href="link"&gt;Some text&lt;/a&gt;<br></code>
+        <a href="#">Some link</a>
       </li>
       <li class="content-block">
-        h1<br>
-        The h1 to h6 tags are used to define HTML headings<br>
-        align<br>
-        <code>&lt;h1&gt;Title&lt;/h1&gt;<br></code>
-        <h1 style="margin: 20px 0 0">Title</h1>
-      </li>
-      <li class="content-block">
-        footer<br>
-        Specifies the trailing area (footer) of a document or section.<br>
+        button<br>
+        The button tag defines a clickable button.<br>
         ---<br>
-        <code>&lt;footer&gt;Content&lt;/footer&gt;<br></code>
+        <code>&lt;button&gt;Click on me&lt;/button&gt;<br></code>
+        <button style="margin: 15px 0 0">Click</button>
       </li>
       <li class="content-block">
-        main<br>
-        specifies the main content of a document<br>
+        abbr<br>
+        The abbr tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.".<br>
+        Attr: title<br>
+        <code>&lt;abbr title="Descr"&gt;Content&lt;/abbr&gt;<br></code>
+        <abbr title="Cascading Style Sheets">CSS</abbr>
+      </li>
+      <li class="content-block">
+        span<br>
+        The tag is an inline container used to mark up a part of a text, or a part of a document.<br>
+        <code>&lt;span&gt;Some text&lt;/span&gt;<br></code>
+      </li>
+      <li class="content-block">
+        map<br>
+        The tag is used to define an image map. An image map is an image with clickable areas.<br>
+        Attr: name<br>
+        <code>&lt;map&gt;Some area&lt;/map&gt;<br></code>
+      </li>
+      <li class="content-block">
+        q<br>
+        The q tag defines a short quotation.<br>
         ---<br>
-        <code>&lt;main&gt;Content&lt;/main&gt;<br></code>
+        <code>&lt;q&gt;Quote&lt;/q&gt;<br></code>
+        Text - <q>My quote. P.S. By me</q>
+      </li>
+      <li class="content-block">
+        textarea<br>
+        The textarea tag defines a multi-line text input control.<br>
+        Often used in a form<br>
+        <code>&lt;textarea name="" id=""&gt;&lt;/texarea&gt;</code><br>
+        <textarea rows="1"></textarea>
+      </li>
+      <li class="content-block">
+        img<br>
+        The tag is used to embed an image in an HTML page.<br>
+        src, alt<br>
+        <code>&lt;img src="path" alt="desc"&gt;<br></code>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h1>CSS</h1>
+    <ul>
+      <li class="content-block">
+        box-shadow<br>
+        The box-shadow property attaches one or more shadows to an element.<br>
+        box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;<br>
+        <code>box-shadow: 0 0 5px 0px #000;<br></code>
+        <div style="margin: 15px 0 0; box-shadow: 0 0 5px 0px #000;">Lorem ipsum.</div>
+      </li>
+      <li class="content-block">
+        box-sizing<br>
+        The box-sizing property defines how the width and height of an element are calculated: should they include padding and borders, or not.<br>
+        <code>box-sizing: border-box;<br></code>
+      </li>
+      <li class="content-block">
+        color<br>
+        The color property specifies the color of text.<br>
+        <code>color: white / #fff<br></code>
+        <div style="color:blueviolet; margin: 15px 0 0;">Color string</div>
+      </li>
+      <li class="content-block">
+        content<br>
+        The content property is used with the ::before and ::after pseudo-elements, to insert generated content.<br>
+        <code>content: "\047E"<br></code>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h1>HTTP / HTTPS</h1>
+    <p style="text-align: center;"><dfn>HTTP</dfn> is Hypertext transfer protocol. Simply put - Rules to sending and receiving text-based messages.<br>
+      <dfn>Hyper Text Transfer Protocol Secure (HTTPS)</dfn> is the secure version of HTTP, the protocol over which data is sent between your browser and the website that you are connected to.</p>
+    <ul>
+      <li class="content-block">
+        The GET Method<br>
+        GET is used to request data from a specified resource.<br>
+        GET is one of the most common HTTP methods.<br>
+        <code>/test/demo_form.php?name1=value1&name2=value2<br></code>
+      </li>
+      <li class="content-block">
+        The POST Method<br>
+        POST is used to send data to a server to create/update a resource.<br>
+        <code>
+          POST /test/demo_form.php HTTP/1.1<br>
+          Host: w3schools.com<br>
+          name1=value1&name2=value2<br>
+        </code>
+      </li>
+      <li class="content-block">
+        The PUT Method<br>
+        PUT is used to send data to a server to create/update a resource.<br>
+        The difference between POST and PUT is that PUT requests are idempotent.
+        That is, calling the same PUT request multiple times will always produce the same result.<br></code>
+      </li>
+      <li class="content-block">
+        The HEAD Method<br>
+        HEAD is almost identical to GET, but without the response body.<br>
+        In other words, if GET /users returns a list of users, then HEAD
+        /users will make the same request but will not return the list of users.<br>
+      </li>
+      <li class="content-block">
+        The DELETE Method<br>
+        The DELETE method deletes the specified resource.<br>
+      </li>
+      <li class="content-block">
+        The OPTIONS Method<br>
+        The OPTIONS method describes the communication options for the target resource.<br>
+      </li>
+      <li class="content-block">
+        DNS Record types<br>
+        - A (Host address) - AAAA (IPv6 host address) - ALIAS (Auto resolved alias) -
+        CNAME (Canonical name for an alias) - MX (Mail eXchange), NS (Name Server) -
+        PTR (Pointer) - SOA (Start Of Authority) - SRV (location of service) - TXT (Descriptive text).<br>
+      </li>
+      <li class="content-block">
+        IP - how to determine an IP address <br>
+        You can find the IP address of any website by going to a command prompt and typing:<br>
+        <code>ping whateverwebsite.com</code>
       </li>
     </ul>
   </section>

@@ -25,7 +25,7 @@
         <input type="text" id="hname" name="hname" placeholder="Superhero alias">
         <label for="age">Age</label>
         <input type="number" min="1" max="999" id="age" name="age"><br><br>
-        <label for="about">About</label>
+        <label for="about-textarea">About</label>
         <textarea
           name="about" 
           id="about-textarea"
@@ -34,7 +34,7 @@
           maxlength="500"
           placeholder="Information About the superhero, max 500 symbols"></textarea><br><br>
         <label for="file">Photo:</label>
-        <input type="file" name="file">
+        <input type="file" id="file" name="file">
       </fieldset>
       <fieldset>
         <legend>Powers</legend>
@@ -51,7 +51,7 @@
         <input type="checkbox" id="other" name="other">
         <label for="other">Other</label><br><br>
         <label for="range">Level of control:</label>
-        <input type="range" name="range" min="0" max="10" value="1">
+        <input type="range" id="range" name="range" min="0" max="10" value="1">
       </fieldset>
       <fieldset>
         <legend>Origin of Powers</legend>
