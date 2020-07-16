@@ -1,0 +1,102 @@
+* {
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 5px 15px;
+}
+
+h1 {
+    font-size: 30px;
+    color: #E67489;
+}
+
+h2 {
+    font-size: 28px;
+    color: #808080;
+    text-align: center;
+}
+
+form > div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox-label {
+    user-select: none;
+    border: 1px solid #1F2A4F;
+    border-radius: 50px;
+    padding: 13px 0 14px;
+    text-transform: uppercase;
+    color: #828282;
+    font-size: 15px;
+    width: 200px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 5px 30px;
+    cursor: pointer;
+    transition: all .1s ease;
+}
+
+.checkbox-label:hover {
+    background-color: rgba(31, 42, 79, .8);
+    color: white;
+}
+
+.checkbox:checked + .checkbox-label {
+    background-color: #1F2A4F;
+    color: white;
+}
+
+.checkbox:checked + .checkbox-label::after {
+    content: '✔';
+    margin-left: 9px;
+    font-size: 16px;
+    margin-top: -4px;
+}
+
+form > .checkbox-label {
+    margin: 0 auto 30px;
+}
+
+.job-det {
+    width: 100%;
+}
+
+.name, .email {
+    width: calc(50% - 15px);   
+}
+
+.name {
+    margin-right: 30px;
+}
+
+.form-input {
+    border: none;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    padding: 6px 15px;
+}
+
+.form-input::placeholder {
+    color:#ccc;
+}
+
+.send {
+    width: 100%;
+    background-color: #E67489;
+    padding: 12px 0;
+    border: none;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 13px;
+}
