@@ -1,9 +1,9 @@
 form {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
 }
 
 form input {
+    width: 100%;
     padding: 0 10px;
     color: green;
     outline-color: blue;
@@ -22,4 +22,8 @@ form button {
 
 form button:hover {
     color: red;
+}
+
+h1 {
+    text-align: center;
 }
