@@ -36,7 +36,7 @@ form > div {
     text-transform: uppercase;
     color: #828282;
     font-size: 15px;
-    width: 200px;
+    width: 215px;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -99,4 +99,9 @@ form > .checkbox-label {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 13px;
+    transition: all 2.3s ease;
+}
+
+.send:hover {
+    background-color: #1F2A4F;
 }
