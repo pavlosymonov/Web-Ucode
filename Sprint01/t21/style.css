@@ -26,11 +26,3 @@ section {
     width: 100%;
     height: 99%;
 }
-
-.row > .img5 img {
-    width: 98% !important;
-}
-
-.img5 {
-    text-align: right;
-}
