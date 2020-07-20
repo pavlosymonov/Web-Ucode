@@ -1,34 +1,12 @@
-.fire {
-    width: 225px;
-    height: 225px;
-    background: linear-gradient(225deg, rgba(235,67,38,1) 0%, rgba(244,183,67,1) 100%);
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
-    margin: 135px 0 10px 280px;
-    border-radius: 50% 0 50% 50%;
-    position: relative;
-    box-shadow: 0 0 12px 1px rgb(212, 61, 35);
-    z-index: 2;
+body {
+    text-align: center;
 }
-.top {
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(182,138,99,1) 33%, rgba(108,59,28,1) 60%, rgba(71,39,19,1) 100%);
-    width: 61px;
-    height: 77px;
-    border-radius: 50px / 65px;
-    position: absolute;
-    top: 310px;
-    left: 258px;
-    box-shadow: 0 -20px 21px 5px #fff;
-    z-index: 3;
+
+.image {
+    transition: all .2s ease;
+    margin-top: calc(50vh - 95px);
 }
-.stick {
-    width: 35px;
-    height: 400px;
-    background: linear-gradient(270deg, rgba(211,137,92,1) 0%, rgba(132,75,35,1) 100%);
-    border: 1px solid rgb(132,75,35);
-    position: absolute;
-    top: 368px;
-    left: 270px;
-    z-index: 1;
-    margin-bottom: 30px;
+
+.image:hover {
+    transform: rotate(-30deg);
 }

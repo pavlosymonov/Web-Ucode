@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Settings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Settings</h1>
+    <section>
+      <form action="#">
+        <div class="typeface-container">
+          <div class="label">Typeface</div>
+          <select name="typeface" id="typeface">
+            <option value="acunim-pro">Acunim Pro</option>
+            <option value="comic-sans">Comic Sans</option>
+            <option value="times-new-roman">Times New Roman</option>
+          </select>
+          <label for="typeface" class="chevron"></label>
+        </div>
+        <div class="theme-container">
+          <label for="theme-checkbox">Dark UI</label>
+          <input type="checkbox" id="theme-checkbox">
+          <span class="theme-slider"></span>
+        </div>
+        <div class="weight-container">
+          <input type="checkbox" id="regular-weight">
+          <label for="regular-weight">Regular</label>
+          <input type="checkbox" id="bold-weight">
+          <label for="bold-weight">Bold</label>
+        </div>
+        <div class="color-container">
+          <input type="checkbox" value="1">
+          <input type="checkbox" value="2">
+          <input type="checkbox" value="3">
+          <input type="checkbox" value="4">
+          <input type="checkbox" value="5">
+        </div>
+        <div class="size-container">
+          <label for="size-range">Size</label>
+          <input type="range" id="size-range" min="0" max="10" value="1">
+        </div>
+      </form>
+      <nav>
+        <ul class="targets">
+          <li class="nav-item">
+            <img src="assets/images/artistic-brush.png" alt="Artistic brush">
+          </li>
+          <li class="nav-item">
+            <img src="assets/images/user-icon.png" alt="User icon">
+          </li>
+          <li class="nav-item">
+            <img src="assets/images/sms-speech-bubble.png" alt="Sms speech bubble">
+          </li>
+          <li class="nav-item">
+            <img src="assets/images/computer-screen.png" alt="Computer">
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>
