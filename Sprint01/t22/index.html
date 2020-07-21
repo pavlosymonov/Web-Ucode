@@ -11,7 +11,7 @@
 <body>
   <main>
     <h1>Settings</h1>
-    <section>
+    <div class="section">
       <form action="#">
         <div class="typeface-container">
           <div class="label">Typeface</div>
@@ -23,25 +23,50 @@
           <label for="typeface" class="chevron"></label>
         </div>
         <div class="theme-container">
-          <label for="theme-checkbox">Dark UI</label>
-          <input type="checkbox" id="theme-checkbox">
-          <span class="theme-slider"></span>
+          <div class="label">Dark UI</div>
+          <label for="theme-checkbox" class="toggle-button">
+            <input type="checkbox" id="theme-checkbox">
+            <span class="theme-slider"></span>
+          </label>
         </div>
         <div class="weight-container">
-          <input type="checkbox" id="regular-weight">
-          <label for="regular-weight">Regular</label>
-          <input type="checkbox" id="bold-weight">
-          <label for="bold-weight">Bold</label>
+          <div class="label">Weight</div>
+          <label class="container" for="regular-weight">Regular
+            <input type="checkbox" checked="checked" id="regular-weight">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container" for="bold-weight">Bold
+            <input type="checkbox" id="bold-weight">
+            <span class="checkmark"></span>
+          </label>
         </div>
         <div class="color-container">
-          <input type="checkbox" value="1">
-          <input type="checkbox" value="2">
-          <input type="checkbox" value="3">
-          <input type="checkbox" value="4">
-          <input type="checkbox" value="5">
+          <div class="label">Color</div>
+          <div class="check-row">
+            <label class="container color-checkbox" for="color1">
+              <input type="checkbox" checked="checked" id="color1" value="1">
+              <span class="checkmark color-checkmark"></span>
+            </label>
+            <label class="container color-checkbox" for="color2">
+              <input type="checkbox" id="color2" value="2">
+              <span class="checkmark color-checkmark"></span>
+            </label>
+            <label class="container color-checkbox" for="color3">
+              <input type="checkbox" id="color3" value="3">
+              <span class="checkmark color-checkmark"></span>
+            </label>
+            <label class="container color-checkbox" for="color4">
+              <input type="checkbox" id="color4" value="4">
+              <span class="checkmark color-checkmark"></span>
+            </label>
+            <label class="container color-checkbox" for="color5">
+              <input type="checkbox" id="color5" value="5">
+              <span class="checkmark color-checkmark"></span>
+            </label>
+          </div>
         </div>
         <div class="size-container">
-          <label for="size-range">Size</label>
+          <div class="label">Size</div>
           <input type="range" id="size-range" min="0" max="10" value="1">
         </div>
       </form>
@@ -61,7 +86,7 @@
           </li>
         </ul>
       </nav>
-    </section>
+    </div>
   </main>
 </body>
 </html>
