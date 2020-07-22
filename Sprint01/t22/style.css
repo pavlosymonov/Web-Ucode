@@ -58,11 +58,16 @@ form {
     width: 100%;
     background-color: #48525E;
     border: 1px solid #808080;
-    padding: 40px 30px 70px;
+    padding: 45px 30px 90px;
     display: grid;
     grid-template-columns: repeat(2, calc(50% - 40px));
     grid-column-gap: 80px;
-    grid-row-gap: 25px;
+    grid-row-gap: 40px;
+}
+
+nav {
+    display: inline-block;
+    margin: auto;
 }
 
 h1 {
@@ -72,6 +77,7 @@ h1 {
 .targets {
     background-color: #323A42;
     border-radius: 0 10px 10px 0;
+    margin: 0;
 }
 
 .targets li img {
