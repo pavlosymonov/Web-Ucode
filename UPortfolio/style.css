@@ -134,87 +134,87 @@ ul, li, h1, h2, h3, p {
 @keyframes noise-anim-1 {
 	 0% {
 		 clip-path: inset(44% 0 57% 0);
-		 text-shadow: -0.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: -1px 0 rgba(255, 152, 0, 1);
 	}
 	 5% {
 		 clip-path: inset(81% 0 14% 0);
-		 text-shadow: -0.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: -0px 0 rgba(255, 152, 0, 1);
 	}
 	 10% {
 		 clip-path: inset(67% 0 5% 0);
-		 text-shadow: 1.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: 1px 0 rgba(255, 152, 0, 1);
 	}
 	 15% {
 		 clip-path: inset(41% 0 30% 0);
-		 text-shadow: 1.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: 2px 0 rgba(255, 152, 0, 1);
 	}
 	 20% {
 		 clip-path: inset(52% 0 37% 0);
-		 text-shadow: 1.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: 2px 0 rgba(255, 152, 0, 1);
 	}
 	 25% {
 		 clip-path: inset(10% 0 58% 0);
-		 text-shadow: -0.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: -1.5px 0 rgba(255, 152, 0, 1);
 	}
 	 30% {
 		 clip-path: inset(5% 0 26% 0);
-		 text-shadow: 0.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: 1px 0 rgba(255, 152, 0, 1);
 	}
 	 35% {
 		 clip-path: inset(71% 0 28% 0);
-		 text-shadow: -0.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: -0px 0 rgba(255, 152, 0, 1);
 	}
 	 40% {
 		 clip-path: inset(4% 0 41% 0);
-		 text-shadow: -0.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: -1px 0 rgba(255, 152, 0, 1);
 	}
 	 45% {
 		 clip-path: inset(23% 0 47% 0);
-		 text-shadow: 0.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: 1px 0 rgba(255, 152, 0, 1);
 	}
 	 50% {
 		 clip-path: inset(2% 0 88% 0);
-		 text-shadow: -0.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: -1px 0 rgba(255, 152, 0, 1);
 	}
 	 55% {
 		 clip-path: inset(69% 0 19% 0);
-		 text-shadow: 0.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: 1px 0 rgba(255, 152, 0, 1);
 	}
 	 60% {
 		 clip-path: inset(65% 0 26% 0);
-		 text-shadow: 0.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: 1px 0 rgba(255, 152, 0, 1);
 	}
 	 65% {
 		 clip-path: inset(47% 0 19% 0);
-		 text-shadow: -0.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: -1px 0 rgba(255, 152, 0, 1);
 	}
 	 70% {
 		 clip-path: inset(61% 0 14% 0);
-		 text-shadow: -0.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: -1px 0 rgba(255, 152, 0, 1);
 	}
 	 75% {
 		 clip-path: inset(21% 0 80% 0);
-		 text-shadow: 1.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: 2px 0 rgba(255, 152, 0, 1);
 	}
 	 80% {
 		 clip-path: inset(100% 0 1% 0);
-		 text-shadow: -0.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: -1px 0 rgba(255, 152, 0, 1);
 	}
 	 85% {
 		 clip-path: inset(21% 0 56% 0);
-		 text-shadow: 1.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: 2px 0 rgba(255, 152, 0, 1);
 	}
 	 90% {
 		 clip-path: inset(41% 0 48% 0);
-		 text-shadow: 1.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: 1px 0 rgba(255, 152, 0, 1);
 	}
 	 95% {
 		 clip-path: inset(72% 0 3% 0);
-		 text-shadow: 0.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: -1px 0 rgba(255, 152, 0, 1);
 	}
 	 100% {
 		 clip-path: inset(73% 0 4% 0);
-		 text-shadow: -0.5 0 rgba(255, 152, 0, 1);
+		 text-shadow: 0px 0 rgba(255, 152, 0, 1);
 	}
 }
  
@@ -378,7 +378,7 @@ ul, li, h1, h2, h3, p {
 
 .about__text {
   line-height: 23px;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 .about__list-item {
