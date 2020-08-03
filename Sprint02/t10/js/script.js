@@ -15,9 +15,9 @@ function showResult(animal) {
 
 function askQuestions() {
   let animal = {};
-  let regName = /^[a-zA-Z]{1,20}$/g,
-    regGender = /^(male|female|)$/gi,
-    regAge = /^[^0]\d{1,4}$/g;
+  let regName = /^[a-zA-Z]{1,20}$/,
+    regGender = /^(male|female|)$/i,
+    regAge = /^[1-9]\d{1,4}$/;
 
   animal.name = prompt("What animal is the superhero most similar to?");
   if (!regName.exec(animal.name) || animal.name == null) {
