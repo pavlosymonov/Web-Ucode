@@ -20,7 +20,7 @@ function askQuestions() {
     regAge = /^[^0]\d{1,4}$/g;
 
   animal.name = prompt("What animal is the superhero most similar to?");
-  if (!regName.exec(animal.name)) {
+  if (!regName.exec(animal.name) || animal.name == null) {
     alert("Animal name is wrong!\nOne word, only letters, from 1 to 20 letters max.");
     return;
   }
@@ -31,7 +31,7 @@ function askQuestions() {
   }
   animal.age = prompt("How old is the superhero?");
   if (!regAge.exec(animal.age)) {
-    alert("Age is wrong!\n Max length 5, only digits, can't start from zero!");
+    alert("Age is wrong!\nMax length 5, only digits, can't start from zero!");
     return;
   }
   showResult(animal);
