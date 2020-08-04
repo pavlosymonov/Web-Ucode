@@ -12,4 +12,5 @@ function displayHero(hero) {
   }
 }
 
-displayHero({team: "Avengers", universe: "Marvel", race: "human", eyeColor: "green", hairColor: "lightBrown/green"});
+displayHero({team: "Avengers", universe: "Marvel", race: "human",
+  eyeColor: "green", hairColor: "lightBrown/green"});

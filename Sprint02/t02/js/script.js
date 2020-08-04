@@ -10,4 +10,5 @@ function displayAuthor() {
   quote = "...";
 }
 
+displayAuthor();
 alert(quote);
