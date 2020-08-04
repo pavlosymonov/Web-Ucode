@@ -8,13 +8,12 @@ let number = 5,
   sym = Symbol("New symbol"),
   varFunc = function () {};
 
-alert("number = " + typeof number +
-  "\nbigInt = " + typeof bigInt +
-  "\nstr = " + typeof str +
-  "\nbool = " + typeof bool +
-  "\nnullVar = " + typeof nullVar +
-  "\nund = " + typeof und +
-  "\nobj = " + typeof obj +
-  "\nsym = " + typeof sym +
-  "\nvarFunc = " + typeof varFunc
-);
+alert(`number = ${typeof number} \
+  \nbigInt = ${typeof bigInt} \
+  \nstr = ${typeof str} \
+  \nbool = ${typeof bool} \
+  \nnullVar = ${typeof nullVar} \
+  \nund = ${typeof und} \
+  \nobj = ${typeof obj} \
+  \nsym = ${typeof sym} \
+  \nvarFunc = ${typeof varFunc}`);

@@ -1,4 +1,4 @@
-var quote;
+let quote;
 
 alert(quote);
 quote = "With great power, comes great responsibility.";
