@@ -26,7 +26,6 @@ function division() {
     alert("Some number is wrong!");
     return;
   }
-
   checkDivision(num1, num2);
 }
 

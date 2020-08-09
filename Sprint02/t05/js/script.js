@@ -1,10 +1,10 @@
-let str1 = "You're catnip to a girl like me. "+ 
+let str1 = "You're catnip to a girl like me. " +
     "Handsome, dazed, and to die for...";
 let lenStr1 = str1.length;
 let index = str1[2];
-let str2 = 'Laurel Hedare: "Game over."';
-let str3 = 'Selina Kyle: catwoman"Mmm seemsCatwomanlike '+
-    'everyCatWomanwoman you try to save windsCatWOMANup dead... '+
+// let str2 = 'Laurel Hedare: "Game over."';
+let str3 = 'Selina Kyle: catwoman"Mmm seemsCatwomanlike ' +
+    'everyCatWomanwoman you try to save windsCatWOMANup dead... ' +
     'or deeply resentful."';
 
 alert("Just string: " + str1 + "\n" + "Length: " + lenStr1 + "\n" +
