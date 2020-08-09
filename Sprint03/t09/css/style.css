@@ -1,0 +1,149 @@
+.game-area__section, .play-btn, #turns-count {
+  transition: all .1s ease;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+}
+
+#game-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.game-area__section {
+  width: 150px;
+  height: 150px;
+  border-bottom: 3px solid #9A9A9A;
+  background-color: #C1C1C1;
+  box-shadow:
+    .5px .5px 0 0 #D98D21, 1px 1px 0 0 #D98D21, 1.5px 1.5px 0 0 #D98D21,
+    2px 2px 0 0 #D98D21, 2.5px 2.5px 0 0 #D98D21, 3px 3px 0 0 #D98D21;
+  margin: 0 5px 10px;
+  font-size: 80px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 143px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.game-area__section:hover {
+  border-bottom: 3px solid transparent;
+  box-shadow: none;
+}
+
+.game-area__section:nth-child(7),
+.game-area__section:nth-child(8),
+.game-area__section:nth-child(9) {
+  margin-bottom: 3px;
+}
+
+.sidebar {
+  background-color: #C1C1C1;
+  margin-left: 7px;
+  padding: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  width: 130px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebar__player {
+  background-color: #D3D3D3;
+  text-align: center;
+  margin-bottom: 7px;
+  padding: 9px 7px;
+  cursor: default;
+}
+
+.sidebar__info {
+  width: 100%;
+}
+
+#turns-count {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 30px;
+}
+
+.sidebar__info p {
+  margin-top: 10px;
+}
+
+.play-btn {
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background-color: #404040;
+  padding: 13px 0;
+  width: 100%;
+  color: #fff;
+  font-size: 13px;
+  font-family: 'Rubik', sans-serif;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.play-btn:hover {
+  background-color: #cc841f;
+}
+
+.winner {
+  color: green;
+  font-size: 95px;
+}
+
+.turn {
+  background-color: #D98D21;
+}
+
+.closed-cell,
+.locked-area .game-area__section {
+  cursor: default;
+}
+
+.closed-cell:hover,
+.locked-area .game-area__section:hover {
+  border-color: #9A9A9A;
+  box-shadow:
+    .5px .5px 0 0 #D98D21, 1px 1px 0 0 #D98D21, 1.5px 1.5px 0 0 #D98D21,
+    2px 2px 0 0 #D98D21, 2.5px 2.5px 0 0 #D98D21, 3px 3px 0 0 #D98D21;
+}
+
+.result {
+  text-align: center;
+  width: 100%;
+  font-size: 24px;
+}
+
+.sidebar-green {
+  background-color: green;
+}
+
+.sidebar-yellow {
+  background-color: #e6982c;
+}
+
+.sidebar-green p,
+.sidebar-green #turns-count,
+.sidebar-green .result {
+  color: white;
+}
