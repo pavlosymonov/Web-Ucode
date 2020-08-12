@@ -1,6 +1,10 @@
 function changePage() {
   let items = document.querySelectorAll("#characters>li");
 
+  /*
+    The function creates circles
+    and adds them to the necessary blocks
+  */
   function addCircles(el) {
     let attrText = el.getAttribute('data-element');
 

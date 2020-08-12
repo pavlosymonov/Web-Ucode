@@ -1,6 +1,9 @@
 function transformation() {
   let title = document.getElementById('hero');
 
+  /*
+    The function sets certain styles to the title
+  */
   function setStyles(name, size, spacing, color) {
     title.innerHTML = name;
     title.style.fontSize = size;

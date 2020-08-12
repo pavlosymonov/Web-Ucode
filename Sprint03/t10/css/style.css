@@ -1,0 +1,94 @@
+.slider {
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+}
+
+/* .slide:nth-child(1) { background-color: red;}
+.slide:nth-child(2) { background-color: green;}
+.slide:nth-child(3) { background-color: yellow;}
+.slide:nth-child(4) { background-color: palevioletred;} */
+
+.fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 0.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.prev, .next {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  width: 90px;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+  height: 100%;
+}
+
+.prev { left: -15%;}
+.next { right: -15%;}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(161, 180, 85, .08);
+}
+
+.prev:hover .arrow-left,
+.next:hover .arrow-right {
+  opacity: 1;
+}
+
+.prev .arrow-left,
+.next .arrow-right {
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  opacity: .4;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.next .arrow-right {
+  background: url(https://image.flaticon.com/icons/svg/566/566012.svg) center no-repeat;
+}
+
+.prev .arrow-left {
+  background: url(https://image.flaticon.com/icons/svg/566/566011.svg) center no-repeat;
+}

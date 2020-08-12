@@ -3,14 +3,28 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Clone of Steve Rogers</title>
-  <meta name="description" content="t02. Clone of Steve Rogers">
+  <title>Notes with local storage</title>
+  <meta name="description" content="t12. Notes with local storage">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <h1>Clone of Steve Rogers</h1>
+  <h1>Notes with local storage</h1>
+  <div class="container">
+    <div class="buttons-block">
+      <button id="add-storage">Add to storage</button>
+      <button id="clear-storage">Clear storage</button>
+    </div>
+    <div class="textarea-block">
+      <label for="area">Text input:</label>
+      <textarea name="area" id="textarea" cols="75" rows="12"></textarea>
+    </div>
+    <div class="notes-block">
+      <div class="notes-label">Notes archiv:</div>
+      <div id="notes-output">[Empty]</div>
+    </div>
+  </div>
   <script src="js/script.js"></script>
-  <script src="js/test.js"></script>
 </body>
 
 </html>

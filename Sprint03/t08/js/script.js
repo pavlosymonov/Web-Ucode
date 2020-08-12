@@ -1,3 +1,8 @@
+
+/*
+  Constructor function that allows you
+  to create an unlimited number of tables
+*/
 function Table() {
   const table = buildTable();
   const headCells = table.querySelectorAll('th');
@@ -7,6 +12,10 @@ function Table() {
     th.addEventListener('click', clickListener);
   });
 
+  /*
+    Closure function, called when you click
+    on the cell by which we want to sort
+  */
   function getClickEvent(cell) {
     let isAsc = cell === 0 ? true : false;
 
@@ -39,6 +48,13 @@ function Table() {
     status.innerHTML = `Sorting by ${param}, order: ${order}`;
   }
 
+  /*
+    The function creates a table based on the values
+    that come from the object. It also contains
+    several sub-functions.
+
+    - Returns the created table.
+  */
   function buildTable() {
     let table = createTable();
     let heroes = [
@@ -78,7 +94,7 @@ function Table() {
       }
     }
     
-    function generateTable(table, data) {
+    function generateTableContent(table, data) {
       let tbody = document.createElement('tbody');
       
       for (let element of data) {
@@ -95,7 +111,7 @@ function Table() {
     
     let data = Object.keys(heroes[0]);
     generateTableHead(table, data);
-    generateTable(table, heroes);
+    generateTableContent(table, heroes);
     return table;
   }
 }
