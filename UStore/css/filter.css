@@ -1,0 +1,8 @@
+.shop-area__sidebar {
+  width: 255px;
+  flex-shrink: 0;
+  border: 2px solid #f0f0f0;
+  border-radius: 2px;
+  padding: 20px;
+  margin-right: 30px;
+}

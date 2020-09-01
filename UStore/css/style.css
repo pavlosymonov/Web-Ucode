@@ -1,19 +1,30 @@
+* {
+	transition: all .15s ease;
+	outline-color: #333;
+}
+
 body {
 	font-family: 'Roboto', Arial, sans-serif;
+}
+
+body, ul, li, p,
+h1, h2, h3, h4, h5, h6 {
 	margin: 0;
-  padding: 0;
+	padding: 0;
 }
 
 ul, li {
 	display: block;
-	margin: 0;
-	padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
-	margin: 0;
-	padding: 0;
+	color: #333;
+}
+
+h1 {
+	font-size: 36px;
+	line-height: 1.2;
 }
 
 div, span, section,
@@ -23,39 +34,58 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a, a:hover {
-	display: block;
 	text-decoration: none;
-	transition: .2s ease all;
+	transition: all .15s ease;
+}
+
+button {
+	border: none;
+	background: transparent;
+	cursor: pointer;
 }
 
 .container {
-  max-width: 1200px;
-  padding: 0 30px;
+  max-width: 1140px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
-.header__container {
+.breadcrumb {
+	background: transparent;
+	padding: 0;
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 0;
 	display: flex;
-	align-items: center;
-	height: 104px;
+	margin-top: 16px;
 }
 
-.search__form {
-	position: relative;
+.breadcrumb-item a {
+	color: #333;
 }
 
-.search__button {
-	position: absolute;
-  right: 0;
+.breadcrumb-item a:hover {
+	color: #1a66ff;
 }
 
-.search__input {
-	border-radius: 3px;
-	border: 2px solid #e5e5e5;
-	padding: 7px 15px;
+.breadcrumb-arrow {
+	fill: #d1d1d1;
+	padding: 0 10px;
 }
 
-.search__input::placeholder {
-	font-family: inherit;
-	font-weight: 500;
+.breadcrumb-item.active {
+	color: #999;
+}
+
+.shop-area__title {
+	padding-top: 6px;
+}
+
+.catalog {
+	display: flex;
+	padding-top: 30px;
+}
+
+body {
+	padding-bottom: 50px;
 }
