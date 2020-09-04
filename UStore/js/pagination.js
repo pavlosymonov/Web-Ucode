@@ -2,7 +2,7 @@ class Pagination {
   constructor() {
     this.parent = document.getElementById('shop-area__pagination');
     this.currentPage = 1;
-    this.numberOfPaginationBtns = 5;
+    this.buttons = 5;
     this.disabledClass = 'disabled';
   }
 
@@ -43,6 +43,23 @@ class Pagination {
       let disablePrevClass = '';
       let disableNextClass = '';
 
+      let maxLeft = (this.currentPage - Math.floor(this.buttons / 2));
+      let maxRight = (this.currentPage + Math.floor(this.buttons / 2));
+
+      if (maxLeft < 1) {
+        maxLeft = 1;
+        maxRight = this.buttons;
+      }
+
+      if (maxRight > pages) {
+        maxLeft = pages - (this.buttons - 1);
+        maxRight = pages;
+
+        if (maxLeft < 1) {
+          maxLeft = 1;
+        }
+      }
+
       if (this.currentPage == 1) {
         disablePrevClass = ` ${this.disabledClass}`;
       } else if (this.currentPage == pages) {
@@ -59,7 +76,17 @@ class Pagination {
         </button>
       `;
 
-      for (let i = 1; i <= pages; i++) {
+      if (this.currentPage != 1 && maxLeft != 1) {
+        this.parent.innerHTML += `
+        <button value="1" class="shop-area__pag-btn"
+            onclick="pagination.handlePageClick(this)">
+          1
+        </button>
+        <span class="pag-ellipsis">...</span>
+        `;
+      }
+
+      for (let i = maxLeft; i <= maxRight; i++) {
         let activeClass = '';
   
         if (i === this.currentPage) {
@@ -71,6 +98,16 @@ class Pagination {
             onclick="pagination.handlePageClick(this)">
             ${i}
           </button>
+        `;
+      }
+
+      if (this.currentPage != pages && maxRight != pages) {
+        this.parent.innerHTML += `
+        <span class="pag-ellipsis">...</span>
+        <button value=${pages} class="shop-area__pag-btn"
+            onclick="pagination.handlePageClick(this)">
+          ${pages}
+        </button>
         `;
       }
 

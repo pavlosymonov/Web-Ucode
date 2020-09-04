@@ -10,9 +10,9 @@ class SortAndShow {
     const sorts = localStorageUtil.getValue(localStorageUtil.keyNameSorts);
 
     if (sorts.length !== 0) {
-      return +sorts[index];
+      return sorts[index];
     } else {
-      return +elem.options[elem.selectedIndex].value;
+      return elem.options[elem.selectedIndex].value;
     }
   }
 
@@ -22,6 +22,7 @@ class SortAndShow {
     let sortName = selectSort.options[selectSort.selectedIndex].value;
     let numberToShow = selectShow.options[selectShow.selectedIndex].value;
 
+    pagination.currentPage = 1;
     localStorageUtil.putSorts(sortName, numberToShow);
     prod.render();
   }
@@ -40,8 +41,9 @@ class SortAndShow {
 
   sortProductsCatalog(catalog) {
     let result = JSON.parse(JSON.stringify(catalog));
-    let sortName = this
-      .getSortValueFromLocalStorage(this.selectSort[0], this.selectSort[1]);
+    let sortName = this.getSortValueFromLocalStorage(
+      this.selectSort[0], this.selectSort[1]
+    );
 
     switch (sortName) {
       case sortAndShow.sortHighPrice:
@@ -68,7 +70,7 @@ class SortAndShow {
 
   render() {
     this.parent.innerHTML = `
-      <div id="shop-area__option" class="shop-area__option">Showing 1—6 of 16 products</div>
+      <div id="shop-area__option" class="shop-area__option"></div>
       <div class="shop-area__sorts">
         <div class="shop-area__sort-by">
           <span>Sort By</span>

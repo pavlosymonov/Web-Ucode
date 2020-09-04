@@ -92,8 +92,8 @@ class Products {
   render(catalog = CATALOG) {
     let htmlCatalog = '';
     const productsCatalog = sortAndShow.sortProductsCatalog(catalog);
-    let data = pagination.paginData(catalog,
-        pagination.currentPage, this.getRealNumberOfProds(productsCatalog));
+    let data = pagination.paginData(productsCatalog,
+        pagination.currentPage, +this.getRealNumberOfProds(productsCatalog));
 
     this.selectedProducts = localStorageUtil
       .getValue(localStorageUtil.keyNameProds);

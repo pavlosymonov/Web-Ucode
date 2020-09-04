@@ -17,6 +17,7 @@
 #shop-area__pagination {
   margin-top: 30px;
   text-align: center;
+  cursor: default;
 }
 
 .shop-area__pag-btn-active {
@@ -43,4 +44,17 @@
 
 .disabled:hover {
   background: none;
+}
+
+.pag-btn-last-first svg {
+  transform: scale(.8);
+}
+
+.pag-btn-last-first {
+  padding: 8px 8px 5px;
+  margin: 0 -5px;
+}
+
+.pag-ellipsis {
+  cursor: default;
 }
