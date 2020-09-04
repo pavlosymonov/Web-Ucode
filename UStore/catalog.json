@@ -1,4 +1,4 @@
-const CATALOG = [
+[
   {
     "id": "el1",
     "name": "Electric Planer Brandix KL370090G 300 Watts",
@@ -111,4 +111,4 @@ const CATALOG = [
     "price": 1800,
     "amount": 2
   }
-];
+]

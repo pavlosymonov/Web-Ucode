@@ -2,15 +2,23 @@ class Products {
 
   constructor() {
     this.parent = document.getElementById('shop-area__catalog');
-    this.selectedProducts = localStorageUtil.getProducts();
     this.labelAdd = 'Add to cart';
     this.labelCheckout = 'Checkout';
     this.classNameActive = 'shop-area__item-btn-active';
   }
 
+  /**
+   *
+   * @param price {number, Array}
+   * @returns {string}
+   */
   setPrice(price) {
     if (typeof price === 'number') {
-      return `<span class="shop-area__item-price">$${price.toFixed(2)}</span>`;
+      return `
+        <span class="shop-area__item-price">
+          $${price.toFixed(2)}
+        </span>
+      `;
     }
     return `
       <div>
@@ -49,7 +57,8 @@ class Products {
       elem.innerHTML = this.labelAdd;
     }
 
-    cart.render(products.length);
+    cart.renderCartButton(products.length);
+    setTimeout(() => cart.renderCart(), 200);
   }
 
   onClickProdBtnHandler(id, amount) {
@@ -59,22 +68,43 @@ class Products {
     return `onclick="prod.handleSetLocationStorage(this, '${id}')"`;
   }
 
-  numberOfProdsToShow() {
-    const select = document.getElementById('show-how-many');
+  getRealNumberOfProds(catalog) {
+    let numberOfProducts = sortAndShow.getSortValueFromLocalStorage(
+      sortAndShow.selectShow[0], sortAndShow.selectShow[1]
+    );
 
-    return select.options[select.selectedIndex].text;
+    if (numberOfProducts > catalog.length) {
+      return catalog.length;
+    }
+
+    return numberOfProducts;
   }
 
-  // handleCountProductsInCatalog() { ---- TODO: Reshow products in catalog
-  //
-  // }
+  setNumberOfShowingProducts(catalog) {
+    const numberOfShowingArea = document.getElementById('shop-area__option');
+    let showingProducts = this.getRealNumberOfProds(catalog);
 
-  render() {
+    numberOfShowingArea.textContent = `
+      Showing 1—${showingProducts} of ${catalog.length} products
+    `;
+  }
+
+  render(catalog = CATALOG) {
     let htmlCatalog = '';
-    let showCount = this.numberOfProdsToShow();
+    const productsCatalog = sortAndShow.sortProductsCatalog(catalog);
+    const showCount = this.getRealNumberOfProds(productsCatalog);
 
+    this.selectedProducts = localStorageUtil
+      .getValue(localStorageUtil.keyNameProds);
+
+    /*
+      This cycle takes a certain number of elements,
+      and then displays them in the product catalog.
+      - showCount: number of products to show;
+      - productsCatalog: copy of the sorted product catalog.
+    */
     for (let i = 0; i < showCount; i++) {
-      let { id, name, brand, price, img, amount } = CATALOG[i];
+      let { id, name, brand, price, img, amount } = productsCatalog[i];
       let activeClass = '';
       let activeText = '';
 
@@ -118,9 +148,9 @@ class Products {
         ${htmlCatalog}
       </ul>
     `;
+
+    this.setNumberOfShowingProducts(productsCatalog);
   }
 }
 
 const prod = new Products();
-
-prod.render();

@@ -1,2 +1,2 @@
-# Web-Ucode
-Stady program in Ucode
+# Web-UCode
+Study program in UCode

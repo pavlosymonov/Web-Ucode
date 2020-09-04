@@ -24,14 +24,16 @@
   width: 100%;
 }
 
-.shop-area__item-name {
+.shop-area__item-name,
+.dropcart__product-name {
   color: inherit;
   transition: .15s;
   font-size: 15px;
   line-height: 19px;
 }
 
-.shop-area__item-name:hover {
+.shop-area__item-name:hover,
+.dropcart__product-name:hover {
   color: #1a66ff;
 }
 
@@ -47,7 +49,8 @@
   color: #b3b3b3;
 }
 
-.shop-area__item-btn {
+.shop-area__item-btn,
+.dropcart__btn {
   padding: 6px 16px 7px;
   font-weight: 500;
   font-size: 14px;

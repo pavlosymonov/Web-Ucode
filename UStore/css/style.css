@@ -1,5 +1,5 @@
 * {
-	transition: all .15s ease;
+	transition: all .1s ease-in-out;
 	outline-color: #333;
 }
 
