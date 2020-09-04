@@ -92,7 +92,8 @@ class Products {
   render(catalog = CATALOG) {
     let htmlCatalog = '';
     const productsCatalog = sortAndShow.sortProductsCatalog(catalog);
-    const showCount = this.getRealNumberOfProds(productsCatalog);
+    let data = pagination.paginData(catalog,
+        pagination.currentPage, this.getRealNumberOfProds(productsCatalog));
 
     this.selectedProducts = localStorageUtil
       .getValue(localStorageUtil.keyNameProds);
@@ -103,8 +104,8 @@ class Products {
       - showCount: number of products to show;
       - productsCatalog: copy of the sorted product catalog.
     */
-    for (let i = 0; i < showCount; i++) {
-      let { id, name, brand, price, img, amount } = productsCatalog[i];
+    for (let i in data.trimmedData) {
+      let { id, name, brand, price, img, amount } = data.trimmedData[i];
       let activeClass = '';
       let activeText = '';
 
@@ -150,6 +151,8 @@ class Products {
     `;
 
     this.setNumberOfShowingProducts(productsCatalog);
+
+    pagination.render(data.pages);
   }
 }
 

@@ -10,9 +10,9 @@ class SortAndShow {
     const sorts = localStorageUtil.getValue(localStorageUtil.keyNameSorts);
 
     if (sorts.length !== 0) {
-      return sorts[index];
+      return +sorts[index];
     } else {
-      return elem.options[elem.selectedIndex].value;
+      return +elem.options[elem.selectedIndex].value;
     }
   }
 

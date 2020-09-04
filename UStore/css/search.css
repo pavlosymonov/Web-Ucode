@@ -42,3 +42,7 @@
   font-family: inherit;
   font-weight: 500;
 }
+
+.shop-area__catalog-area {
+  width: 100%;
+}
