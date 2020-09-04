@@ -82,8 +82,12 @@ class Pagination {
             onclick="pagination.handlePageClick(this)">
           1
         </button>
-        <span class="pag-ellipsis">...</span>
         `;
+        if (maxLeft > 2) {
+          this.parent.innerHTML += `
+            <span class="pag-ellipsis">...</span>
+          `;
+        }
       }
 
       for (let i = maxLeft; i <= maxRight; i++) {
@@ -102,8 +106,12 @@ class Pagination {
       }
 
       if (this.currentPage != pages && maxRight != pages) {
+        if (maxLeft < pages - 1) {
+          this.parent.innerHTML += `
+            <span class="pag-ellipsis">...</span>
+          `;
+        }
         this.parent.innerHTML += `
-        <span class="pag-ellipsis">...</span>
         <button value=${pages} class="shop-area__pag-btn"
             onclick="pagination.handlePageClick(this)">
           ${pages}
