@@ -2,7 +2,7 @@ class Pagination {
   constructor() {
     this.parent = document.getElementById('shop-area__pagination');
     this.currentPage = 1;
-    this.buttons = 5;
+    this.buttons = 4;
     this.disabledClass = 'disabled';
   }
 

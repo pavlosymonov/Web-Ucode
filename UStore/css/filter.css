@@ -3,6 +3,204 @@
   flex-shrink: 0;
   border: 2px solid #f0f0f0;
   border-radius: 2px;
-  padding: 20px;
   margin-right: 30px;
+}
+
+.shop-area__sidebar-title {
+  padding: 20px;
+}
+
+.collapse-item {
+  padding: 8px 10px;
+  border-top: 2px solid #f0f0f0;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.filter__range-container {
+  position: relative;
+  margin: 20px 5px;
+}
+
+.filter__range-container input {
+  outline: 0;
+}
+
+.filter-body input[type=range] {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  transition: all .2s ease;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #E0E0E0;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #E0E0E0;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #E0E0E0;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animation-duration: 0.2s;
+  background: #E0E0E0;
+  border-radius: 2px;
+  box-shadow: none;
+  border: 0;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  z-index: 2;
+  position: relative;
+  box-shadow: 0px 0px 0px #000;
+  border: 1px solid #f0f0f0;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='10' width='10'%3E%3Ccircle cx='5' cy='5' r='4' stroke='black' fill='black' /%3E%3C/svg%3E") no-repeat 50%;
+  background-size: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+  transition: all .2s ease;
+}
+
+input[type=range]:focus::-webkit-slider-thumb {
+  background-size: 5px;
+  border-color: transparent;
+  box-shadow: 0 0 1px 3px rgba(204,204,204,.3);
+}
+
+input[type=range]::-ms-thumb {
+  z-index: 2;
+  position: relative;
+  box-shadow: 0px 0px 0px #000;
+  border: 1px solid #f0f0f0;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='10' width='10'%3E%3Ccircle cx='5' cy='5' r='4' stroke='black' fill='black' /%3E%3C/svg%3E") no-repeat 50%;
+  background-size: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  z-index: 2;
+  position: relative;
+  box-shadow: 0px 0px 0px #000;
+  border: 1px solid #f0f0f0;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='10' width='10'%3E%3Ccircle cx='5' cy='5' r='4' stroke='black' fill='black' /%3E%3C/svg%3E") no-repeat 50%;
+  background-size: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animation-duration: 0.2s;
+  background: #E0E0E0;
+  border-radius: 2px;
+  box-shadow: none;
+  border: 0;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animation-duration: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower,
+input[type=range]::-ms-fill-upper {
+  background: #E0E0E0;
+  border-radius: 2px;
+  box-shadow: none;
+  border: 0;
+}
+
+.filter-body > span > span {
+  color: #ddd;
+}
+
+.filter__title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  font-size: 15px;
+  font-weight: 700;
+  fill: #ccc;
+  outline: none;
+  border-radius: 2px;
+}
+
+.filter-range {
+  position: absolute;
+  z-index: 1;
+  height: 5px;
+  margin-left: 4px;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  border-radius: 2px;
+  transition: none;
+}
+
+.filter__title:focus, .filter__title:hover {
+  transition-duration: .1s,.1s;
+  background: #f2f2f2;
+  fill: #b3b3b3;
+}
+
+.filter-body {
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all .2s;
+}
+
+#shop-area__filters .collapse-opened svg {
+  transform: rotate(180deg);
+}
+
+#shop-area__filters .collapse-opened .filter-body {
+  padding: 10px 0 16px;
+  transition-delay: 0s,0s;
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+}
+
+.filter-price__title {
+  margin: 40px 10px 0px;
+  font-size: 14px;
+  color: #999;
 }

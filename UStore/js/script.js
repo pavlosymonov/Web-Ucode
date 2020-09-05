@@ -1,6 +1,8 @@
 function render() {
   searchForm.render();
 
+  filters.render();
+
   sortAndShow.render();
 
   prod.render();
