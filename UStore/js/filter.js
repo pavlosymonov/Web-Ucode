@@ -65,6 +65,23 @@ class Filters {
     return res;
   }
 
+  setCountOfActiveFilters() {
+    const countItem = document.querySelector('.filters-button__counter');
+    let count = 0;
+
+    for (let key in filters.activeFilters) {
+      if (Array.isArray(filters.activeFilters[key]) &&
+          filters.activeFilters[key].length !== 0) {
+        count++;
+      } else if (typeof filters.activeFilters[key] === 'string' &&
+          filters.activeFilters[key] !== 'All') {
+        count++;
+      }
+    }
+
+    countItem.textContent = count;
+  }
+
   handleCollapse(el) {
     if (!el.parentNode.classList.contains('collapse-opened')) {
       el.parentNode.classList.add('collapse-opened');
@@ -101,6 +118,8 @@ class Filters {
 
     filters.createListOfAvailables(searchForm.catalog.filter((prod) =>
       filters.priceFilter(prod) && filters.brandsFilter(prod)));
+
+    filters.setCountOfActiveFilters();
   }
 
   handleCheckedBrends(input) {
@@ -116,6 +135,8 @@ class Filters {
 
     filters.createListOfAvailables(searchForm.catalog.filter((prod) =>
       filters.priceFilter(prod) && filters.brandsFilter(prod)));
+
+    filters.setCountOfActiveFilters();
   }
 
   handleAvailability(input) {
@@ -125,6 +146,8 @@ class Filters {
 
     filters.createListOfBrands(searchForm.catalog.filter((prod) =>
       filters.priceFilter(prod) && filters.availableFilter(prod)));
+
+    filters.setCountOfActiveFilters();
   }
 
   createListOfBrands(prods = searchForm.catalog) {
