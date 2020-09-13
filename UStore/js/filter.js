@@ -65,6 +65,14 @@ class Filters {
     return res;
   }
 
+  handleCollapse(el) {
+    if (!el.parentNode.classList.contains('collapse-opened')) {
+      el.parentNode.classList.add('collapse-opened');
+    } else {
+      el.parentNode.classList.remove('collapse-opened');
+    }
+  }
+
   handleRangeInput() {
     let firstSlider = parseFloat(filters.ranges[0].value),
       secondSlider = parseFloat(filters.ranges[1].value);
@@ -86,70 +94,13 @@ class Filters {
 
     filters.activeFilters.price = [firstSlider, secondSlider];
 
-    console.log(filters.minPrice, filters.maxPrice);
-
     filters.renderProductsByFilters();
-  }
 
-  handleCollapse(el) {
-    if (!el.parentNode.classList.contains('collapse-opened')) {
-      el.parentNode.classList.add('collapse-opened');
-    } else {
-      el.parentNode.classList.remove('collapse-opened');
-    }
-  }
+    filters.createListOfBrands(searchForm.catalog.filter((prod) =>
+      filters.priceFilter(prod) && filters.availableFilter(prod)));
 
-  renderPriceFilter() {
-    let el = document.createElement('div');
-    el.classList.add('collapse-item', 'collapse-opened');
-    
-    this.workCatalog.forEach(el => {
-      let price = typeof el.price === 'object' ? el.price[0] : el.price;
-
-      if (price > this.maxPrice) {
-        this.maxPrice = price + 100;
-      }
-
-      if (price < this.minPrice) {
-        this.minPrice = price;
-      }
-    });
-
-    el.innerHTML = `
-      <button type="button" class="filter__title"
-        onclick="filters.handleCollapse(this)">
-        Price
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" class="filter__arrow">
-          <path d="M.286.273a.92.92 0 00-.01 1.292l5.24 5.428 5.241-5.428a.92.92 0 00-.01-1.292.923.923 0 00-1.31.006L5.516 4.296 1.596.279A.923.923 0 00.286.273z"></path>
-        </svg>
-      </button>
-      <div class="filter-body">
-        <div class="filter__range-container">
-          <input value=${this.minPrice}
-            min=${this.minPrice} max=${this.maxPrice} step="10" type="range"
-            oninput="filters.handleRangeInput()"/>
-          <input value=${this.maxPrice}
-            min=${this.minPrice} max=${this.maxPrice} step="10" type="range"
-            oninput="filters.handleRangeInput()"/>
-          <div class="filter-range"></div>
-        </div>
-        <div class="filter-price__title">
-          Price:
-          <span class="filter-price__value"></span>
-          –
-          <span class="filter-price__value"></span>
-        </div>
-      </div>
-    `;
-
-    this.parent.append(el);
-
-    this.ranges = this.parent.querySelectorAll("input[type=range]"),
-    this.numbers = this.parent.querySelectorAll(".filter-price__value");
-    this.filedRange = this.parent.querySelector(".filter-range");
-
-    this.numbers[0].innerHTML = `$${Number(this.ranges[0].value).toFixed(2)}`;
-    this.numbers[1].innerHTML = `$${Number(this.ranges[1].value).toFixed(2)}`;
+    filters.createListOfAvailables(searchForm.catalog.filter((prod) =>
+      filters.priceFilter(prod) && filters.brandsFilter(prod)));
   }
 
   handleCheckedBrends(input) {
@@ -269,6 +220,59 @@ class Filters {
     }
 
     list.innerHTML = html;
+  }
+
+  renderPriceFilter() {
+    let el = document.createElement('div');
+    el.classList.add('collapse-item', 'collapse-opened');
+    
+    this.workCatalog.forEach(el => {
+      let price = typeof el.price === 'object' ? el.price[0] : el.price;
+
+      if (price > this.maxPrice) {
+        this.maxPrice = price + 100;
+      }
+
+      if (price < this.minPrice) {
+        this.minPrice = price;
+      }
+    });
+
+    el.innerHTML = `
+      <button type="button" class="filter__title"
+        onclick="filters.handleCollapse(this)">
+        Price
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" class="filter__arrow">
+          <path d="M.286.273a.92.92 0 00-.01 1.292l5.24 5.428 5.241-5.428a.92.92 0 00-.01-1.292.923.923 0 00-1.31.006L5.516 4.296 1.596.279A.923.923 0 00.286.273z"></path>
+        </svg>
+      </button>
+      <div class="filter-body">
+        <div class="filter__range-container">
+          <input value=${this.minPrice}
+            min=${this.minPrice} max=${this.maxPrice} step="10" type="range"
+            oninput="filters.handleRangeInput()"/>
+          <input value=${this.maxPrice}
+            min=${this.minPrice} max=${this.maxPrice} step="10" type="range"
+            oninput="filters.handleRangeInput()"/>
+          <div class="filter-range"></div>
+        </div>
+        <div class="filter-price__title">
+          Price:
+          <span class="filter-price__value"></span>
+          –
+          <span class="filter-price__value"></span>
+        </div>
+      </div>
+    `;
+
+    this.parent.append(el);
+
+    this.ranges = this.parent.querySelectorAll("input[type=range]"),
+    this.numbers = this.parent.querySelectorAll(".filter-price__value");
+    this.filedRange = this.parent.querySelector(".filter-range");
+
+    this.numbers[0].innerHTML = `$${Number(this.ranges[0].value).toFixed(2)}`;
+    this.numbers[1].innerHTML = `$${Number(this.ranges[1].value).toFixed(2)}`;
   }
 
   renderBrandFilter() {
