@@ -166,10 +166,11 @@
   color: #333;
 }
 
-.dropcart__products-list > span {
+.empty-cart {
   color: #ccc;
   display: block;
   text-align: center;
+  padding: 25px 0;
 }
 
 .dropcart__products-item .new-price,

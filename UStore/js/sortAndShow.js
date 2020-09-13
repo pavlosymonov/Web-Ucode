@@ -68,9 +68,37 @@ class SortAndShow {
     }
   }
 
+  eventHendling() {
+    const container = document.getElementById('shop-area__filters-container');
+
+    document.querySelector('.shop-area__filters-btn')
+      .addEventListener('click', () => {
+      container.classList.add('filters-container--open');
+      bodyOverflow('hidden', '17px');
+    });
+
+    document.querySelector('.filters__overlay').addEventListener('click', () => {
+      container.classList.remove('filters-container--open');
+      bodyOverflow('auto', '0');
+    });
+
+    document.querySelector('.filters__close').addEventListener('click', () => {
+      container.classList.remove('filters-container--open');
+      bodyOverflow('auto', '0');
+    });
+  }
+
   render() {
     this.parent.innerHTML = `
+      <button type="button" class="shop-area__filters-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="filters-button__icon">
+          <path d="M7 14v-2h9v2H7zm7-7h2v2h-2V7zm-1.5-1c.3 0 .5.2.5.5v3c0 .3-.2.5-.5.5h-2c-.3 0-.5-.2-.5-.5v-3c0-.3.2-.5.5-.5h2zM7 2h9v2H7V2zM5.5 5h-2c-.3 0-.5-.2-.5-.5v-3c0-.3.2-.5.5-.5h2c.3 0 .5.2.5.5v3c0 .3-.2.5-.5.5zM0 2h2v2H0V2zm9 7H0V7h9v2zm-7 5H0v-2h2v2zm1.5-3h2c.3 0 .5.2.5.5v3c0 .3-.2.5-.5.5h-2c-.3 0-.5-.2-.5-.5v-3c0-.3.2-.5.5-.5z"></path>
+        </svg>
+        <span class="filters-button__title">Filters</span>
+        <span class="filters-button__counter">0</span>
+      </button>
       <div id="shop-area__option" class="shop-area__option"></div>
+      <div class="view-options__divider"></div>
       <div class="shop-area__sorts">
         <div class="shop-area__sort-by">
           <span>Sort By</span>
@@ -100,6 +128,8 @@ class SortAndShow {
 
     this.setSelectedSelectOption(this.selectSort);
     this.setSelectedSelectOption(this.selectShow);
+
+    this.eventHendling();
   }
 }
 

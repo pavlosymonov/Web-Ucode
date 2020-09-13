@@ -97,9 +97,13 @@ class Cart {
     });
 
     this.cartParent.innerHTML = `
-      <ul class="dropcart__products-list">
-        ${htmlCatalog === '' ? '<span>Cart is empty!</span>' : htmlCatalog}
-      </ul>
+      
+      ${htmlCatalog === '' ? 
+        '<span class="empty-cart">Cart is empty!</span>' : `
+          <ul class="dropcart__products-list">  
+            ${htmlCatalog}
+          </ul>
+        `}
       <div class="dropcart__total">
         <strong>Total</strong>
         <span>$${sumCatalog.toFixed(2)}</span>

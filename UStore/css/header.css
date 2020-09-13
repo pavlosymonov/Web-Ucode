@@ -75,3 +75,10 @@
 .header__nav-link:hover {
   background: #434343;
 }
+
+@media screen and (max-width: 768px) {
+  .header__intro {
+    height: 80px;
+    justify-content: space-between;
+  }
+}

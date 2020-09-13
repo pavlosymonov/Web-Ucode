@@ -16,6 +16,7 @@
 
 .shop-area__sorts {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .shop-area__sort-by {
@@ -31,4 +32,18 @@ select.controls {
 
 select {
   appearance: none;
+}
+
+@media screen and (max-width: 371px) {
+  .shop-area__show {
+    margin-top: 10px;
+  }
+  .shop-area__option {
+    margin-left: 7px;
+  }
+}
+@media screen and (max-width: 346px) {
+  .shop-area__option {
+    margin: 10px 7px 0 0;
+  }
 }

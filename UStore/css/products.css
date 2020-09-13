@@ -164,3 +164,37 @@
   background: #f0f0f0;
   color: #333;
 }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+	.shop-area__list {
+		grid-template-columns: repeat(2, minmax(200px, 1fr));
+	}
+}
+
+@media (max-width: 992px) {
+	.shop-area__item-btn, .dropcart__btn {
+    padding: 3px 8px 4px;
+    font-weight: 400;
+    font-size: 13px;
+  }
+  .shop-area__availability {
+    font-weight: 500;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-area__list {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-gap: 14px 10px;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .shop-area__list {
+    justify-content: center;
+    grid-template-columns: repeat(1, minmax(200px, 270px));
+    grid-gap: 12px 8px;
+  }
+}

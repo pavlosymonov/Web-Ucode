@@ -16,15 +16,15 @@ class Products {
     if (typeof price === 'number') {
       return `
         <span class="shop-area__item-price">
-          $${price.toFixed(2)}
+          $<span itemprop="price">${price.toFixed(2)}</span>
         </span>
       `;
     }
     return `
       <div>
         <span class="old-price">$${price[1].toFixed(2)}</span>
-        <span class="shop-area__item-price new-price">
-          $${price[0].toFixed(2)}
+        <span class="shop-area__item-price new-price" >
+          $<span itemprop="price">${price[0].toFixed(2)}</span>
         </span>
       </div>
     `;
@@ -89,7 +89,7 @@ class Products {
     `;
   }
 
-  render(catalog = CATALOG) {
+  render(catalog = filters.workCatalog) {
     let htmlCatalog = '';
     const productsCatalog = sortAndShow.sortProductsCatalog(catalog);
     let data = pagination.paginData(productsCatalog,
@@ -120,17 +120,19 @@ class Products {
       }
 
       htmlCatalog += `
-        <li class="shop-area__item">
+        <li class="shop-area__item" itemscope itemtype="http://schema.org/Product">
           <div>
-            <a href="#">
-              <img class="shop-area__item-img" src=${img} alt=${name}>
+            <a href="#" itemprop="url">
+              <img itemprop="image" class="shop-area__item-img" src="${img}" alt="${name}">
             </a>
             <div class="shop-area__text-info">
-              <a href="#" class="shop-area__item-name">${name}</a>
-              <p class="shop-area__item-brand">${brand}</p>
+              <a href="#" class="shop-area__item-name">
+                <span itemprop="name">${name}</span>
+              </a>
+              <p itemprop="brand" class="shop-area__item-brand">${brand}</p>
             </div>
           </div>
-          <div class="shop-area__buy">
+          <div class="shop-area__buy" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
             <div class="shop-area__cart-area">
               ${this.setPrice(price)}
               <button class="shop-area__item-btn ${activeClass}"
@@ -144,11 +146,17 @@ class Products {
       `;
     }
 
-    this.parent.innerHTML = `
+    if (data.trimmedData.length === 0) {
+      this.parent.innerHTML = `
+        <div class="empty-product-catalog">Oops, there's nothing here.</div>
+      `;
+    } else {
+      this.parent.innerHTML = `
       <ul class="shop-area__list">
         ${htmlCatalog}
       </ul>
     `;
+    }
 
     this.setNumberOfShowingProducts(productsCatalog);
 

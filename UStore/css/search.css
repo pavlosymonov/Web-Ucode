@@ -45,4 +45,56 @@
 
 .shop-area__catalog-area {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.search__button-close {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .site-header__search {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 1px 7px rgba(0,0,0,.25);
+    z-index: 1;
+    transform: translateY(-100%);
+    visibility: hidden;
+    transition: all .3s;
+  }
+  .search__form {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .search__button-close {
+    display: block;
+    fill: #999;
+    border-left: 1px solid #f3f3f3;
+    width: 66px;
+
+  }
+  .search__button-close:hover {
+    fill: #333;
+  }
+  .search__input, .search__input:hover {
+    border-color: transparent;
+  }
+  .search__button {
+    width: 60px;
+    height: 100%;
+    right: 60px;
+  }
+  .site-header__search--open {
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .mobile-search-button {
+    display: block;
+  }
 }

@@ -62,7 +62,9 @@ class Pagination {
 
       if (this.currentPage == 1) {
         disablePrevClass = ` ${this.disabledClass}`;
-      } else if (this.currentPage == pages) {
+      }
+      
+      if (this.currentPage == pages) {
         disableNextClass = ` ${this.disabledClass}`;
       }
 

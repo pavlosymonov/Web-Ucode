@@ -1,133 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Web developer Pavel Simonov">
-	<meta name="description" content="описание">
-	<meta name="keywords" content="ключевые, слова, через, запятую">
-  <title>UStore — Online shopping</title>
-  <!-- Favicon -->
-	<link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-  <!-- OG Tags -->
-  <meta property="og:title" content="Заголовок">
-  <meta property="og:description" content="Описание">
-  <meta property="og:type" content="article">
-  <meta property="og:image" content="#">
-  <meta property="og:site_name" content="Имя сайта">
-  <!-- Подключение CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/header.css">
-</head>
-<body>
-  <header>
-    <div class="header__intro container">
-      <div class="site-header__logo">
-        <a href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="196" height="26" class="">
-            <path d="M194.797 18H184a1 1 0 01-1 1h-1a1 1 0 01-1-1v-2h-2.623a1.5 1.5 0 01-1.442-1.088L173.246 2H168v2h.5a1.5 1.5 0 011.5 1.5v19a1.5 1.5 0 01-1.5 1.5h-3a1.5 1.5 0 01-1.5-1.5v-19a1.5 1.5 0 011.5-1.5h.5V1.5a1.5 1.5 0 011.5-1.5h6.122a1.5 1.5 0 011.443 1.088L178.754 14H181v-1a1 1 0 011-1h1a1 1 0 011 1h10.797c.664 0 1.203.539 1.203 1.203v2.594c0 .664-.539 1.203-1.203 1.203zm-38.014 8h-2.3a1.701 1.701 0 01-1.599-1.122l-2.447-6.743a.205.205 0 00-.192-.135h-7.477a.205.205 0 00-.192.135l-2.447 6.743A1.702 1.702 0 01138.53 26h-2.3a1.205 1.205 0 01-1.13-1.617l8.345-23.261A1.701 1.701 0 01145.044 0h2.925c.716 0 1.354.448 1.599 1.122l8.345 23.261a1.205 1.205 0 01-1.13 1.617zm-8.311-13.275l-1.774-4.877a.203.203 0 00-.383 0l-1.774 4.877a.204.204 0 00.192.275h3.547a.204.204 0 00.192-.275zM130.493 26h-2.403a1.5 1.5 0 01-1.298-.75L122.61 18l-2.607 4.52v1.98c0 .828-.67 1.5-1.498 1.5h-1.998a1.5 1.5 0 01-1.498-1.5v-23a1.5 1.5 0 011.498-1.5h1.998c.828 0 1.498.672 1.498 1.5v11.02L126.792.75A1.5 1.5 0 01128.09 0h2.403c1.153 0 1.874 1.25 1.298 2.25L125.487 13l6.304 10.75c.576 1-.145 2.25-1.298 2.25zm-26.506-10.225V24.5a1.5 1.5 0 01-1.501 1.5h-2.001a1.5 1.5 0 01-1.501-1.5v-8.725l-.39-.675L91.18 2.25c-.57-1 .15-2.25 1.301-2.25h2.311c.53 0 1.031.29 1.301.75l5.393 9.34 5.393-9.34c.27-.46.77-.75 1.3-.75h2.312c1.15 0 1.871 1.25 1.3 2.25l-7.804 13.525zM79 26c-7.179 0-13-5.821-13-13C66 5.82 71.821-.001 79-.001 86.18-.001 92.001 5.82 92.001 13c0 7.179-5.821 13-13.001 13zm0-21a8 8 0 100 16 8 8 0 000-16zM62.793 23.75c.569 1-.15 2.25-1.299 2.25h-2.308c-.53 0-1.029-.29-1.299-.75L53.711 18h-4.706v6.5c0 .83-.67 1.5-1.499 1.5h-1.998c-.829 0-1.499-.67-1.499-1.5v-23c0-.83.67-1.5 1.499-1.5H54c4.966 0 8.992 4.03 8.992 9 0 3.24-1.718 6.09-4.286 7.67l4.087 7.08zM54 5h-3.996c-.55 0-.999.45-.999 1v6c0 .55.449 1 .999 1H54a3.998 3.998 0 003.997-4c0-2.21-1.789-4-3.997-4zM39.5 5H33v19.5a1.5 1.5 0 01-1.5 1.5h-2a1.5 1.5 0 01-1.5-1.5V5h-6.5A1.5 1.5 0 0120 3.5v-2A1.5 1.5 0 0121.5 0h18A1.5 1.5 0 0141 1.5v2A1.5 1.5 0 0139.5 5zM16.487 8h-2.306c-.616 0-1.141-.389-1.391-.952C12.261 5.856 10.765 5 9 5 6.793 5 5.005 6.34 5.005 8c0 .94.57 1.78 1.478 2.32.223.135.465.254.723.353a1.492 1.492 0 01.749 2.139l-1.007 1.746c-.375.65-1.18.941-1.868.643A8.843 8.843 0 011.989 13C.751 11.63.012 9.89.012 8 .012 3.58 4.037 0 9 0c4.254 0 8.017 2.629 8.95 6.163.246.932-.5 1.837-1.463 1.837zM1.513 18H3.82c.615 0 1.14.389 1.39.952C5.739 20.144 7.236 21 9 21c2.207 0 3.995-1.34 3.995-3 0-.94-.569-1.78-1.478-2.32a4.448 4.448 0 00-.723-.353 1.493 1.493 0 01-.749-2.139l1.008-1.746c.374-.65 1.18-.941 1.867-.643A8.817 8.817 0 0116.011 13c1.238 1.37 1.977 3.11 1.977 5 0 4.42-4.024 8-8.988 8-4.253 0-8.017-2.629-8.95-6.163C-.196 18.905.55 18 1.513 18z"></path>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Web developer Pavel Simonov">
+    <meta name="description" content="Online store created on the instructions
+      of the Unit Factory programmers school according to the Ucode training
+      program - Front-end direction">
+    <meta name="keywords" content="drill, store, shop, shoping, work, stroyka">
+    <title>UStore — Online shopping</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- OG Tags -->
+    <meta property="og:title" content="UStore — Online shopping">
+    <meta property="og:description" content="Online store created on the
+      instructions of the Unit Factory programmers school according to the
+      Ucode training program - Front-end direction">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="#">
+    <meta property="og:site_name" content="Stroyka">
+    <!-- Подключение CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+  </head>
+  <body>
+    <header>
+      <div class="header__intro container">
+        <div class="site-header__logo">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="196" height="26" class="">
+              <path d="M194.797 18H184a1 1 0 01-1 1h-1a1 1 0 01-1-1v-2h-2.623a1.5 1.5 0 01-1.442-1.088L173.246 2H168v2h.5a1.5 1.5 0 011.5 1.5v19a1.5 1.5 0 01-1.5 1.5h-3a1.5 1.5 0 01-1.5-1.5v-19a1.5 1.5 0 011.5-1.5h.5V1.5a1.5 1.5 0 011.5-1.5h6.122a1.5 1.5 0 011.443 1.088L178.754 14H181v-1a1 1 0 011-1h1a1 1 0 011 1h10.797c.664 0 1.203.539 1.203 1.203v2.594c0 .664-.539 1.203-1.203 1.203zm-38.014 8h-2.3a1.701 1.701 0 01-1.599-1.122l-2.447-6.743a.205.205 0 00-.192-.135h-7.477a.205.205 0 00-.192.135l-2.447 6.743A1.702 1.702 0 01138.53 26h-2.3a1.205 1.205 0 01-1.13-1.617l8.345-23.261A1.701 1.701 0 01145.044 0h2.925c.716 0 1.354.448 1.599 1.122l8.345 23.261a1.205 1.205 0 01-1.13 1.617zm-8.311-13.275l-1.774-4.877a.203.203 0 00-.383 0l-1.774 4.877a.204.204 0 00.192.275h3.547a.204.204 0 00.192-.275zM130.493 26h-2.403a1.5 1.5 0 01-1.298-.75L122.61 18l-2.607 4.52v1.98c0 .828-.67 1.5-1.498 1.5h-1.998a1.5 1.5 0 01-1.498-1.5v-23a1.5 1.5 0 011.498-1.5h1.998c.828 0 1.498.672 1.498 1.5v11.02L126.792.75A1.5 1.5 0 01128.09 0h2.403c1.153 0 1.874 1.25 1.298 2.25L125.487 13l6.304 10.75c.576 1-.145 2.25-1.298 2.25zm-26.506-10.225V24.5a1.5 1.5 0 01-1.501 1.5h-2.001a1.5 1.5 0 01-1.501-1.5v-8.725l-.39-.675L91.18 2.25c-.57-1 .15-2.25 1.301-2.25h2.311c.53 0 1.031.29 1.301.75l5.393 9.34 5.393-9.34c.27-.46.77-.75 1.3-.75h2.312c1.15 0 1.871 1.25 1.3 2.25l-7.804 13.525zM79 26c-7.179 0-13-5.821-13-13C66 5.82 71.821-.001 79-.001 86.18-.001 92.001 5.82 92.001 13c0 7.179-5.821 13-13.001 13zm0-21a8 8 0 100 16 8 8 0 000-16zM62.793 23.75c.569 1-.15 2.25-1.299 2.25h-2.308c-.53 0-1.029-.29-1.299-.75L53.711 18h-4.706v6.5c0 .83-.67 1.5-1.499 1.5h-1.998c-.829 0-1.499-.67-1.499-1.5v-23c0-.83.67-1.5 1.499-1.5H54c4.966 0 8.992 4.03 8.992 9 0 3.24-1.718 6.09-4.286 7.67l4.087 7.08zM54 5h-3.996c-.55 0-.999.45-.999 1v6c0 .55.449 1 .999 1H54a3.998 3.998 0 003.997-4c0-2.21-1.789-4-3.997-4zM39.5 5H33v19.5a1.5 1.5 0 01-1.5 1.5h-2a1.5 1.5 0 01-1.5-1.5V5h-6.5A1.5 1.5 0 0120 3.5v-2A1.5 1.5 0 0121.5 0h18A1.5 1.5 0 0141 1.5v2A1.5 1.5 0 0139.5 5zM16.487 8h-2.306c-.616 0-1.141-.389-1.391-.952C12.261 5.856 10.765 5 9 5 6.793 5 5.005 6.34 5.005 8c0 .94.57 1.78 1.478 2.32.223.135.465.254.723.353a1.492 1.492 0 01.749 2.139l-1.007 1.746c-.375.65-1.18.941-1.868.643A8.843 8.843 0 011.989 13C.751 11.63.012 9.89.012 8 .012 3.58 4.037 0 9 0c4.254 0 8.017 2.629 8.95 6.163.246.932-.5 1.837-1.463 1.837zM1.513 18H3.82c.615 0 1.14.389 1.39.952C5.739 20.144 7.236 21 9 21c2.207 0 3.995-1.34 3.995-3 0-.94-.569-1.78-1.478-2.32a4.448 4.448 0 00-.723-.353 1.493 1.493 0 01-.749-2.139l1.008-1.746c.374-.65 1.18-.941 1.867-.643A8.817 8.817 0 0116.011 13c1.238 1.37 1.977 3.11 1.977 5 0 4.42-4.024 8-8.988 8-4.253 0-8.017-2.629-8.95-6.163C-.196 18.905.55 18 1.513 18z"></path>
+            </svg>
+          </a>
+        </div>
+        <div id="site-header__search" class="site-header__search"></div>
+        <button class="mobile-search-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+            <path d="M19.2 17.8s-.2.5-.5.8c-.4.4-.9.6-.9.6s-.9.7-2.8-1.6c-1.1-1.4-2.2-2.8-3.1-3.9-1 .8-2.4 1.3-3.9 1.3-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7c0 1.5-.5 2.9-1.3 4 1.1.8 2.5 2 4 3.1 2.3 1.7 1.5 2.7 1.5 2.7zM8 3C5.2 3 3 5.2 3 8s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5z"></path>
           </svg>
-        </a>
-      </div>
-      <div id="site-header__search" class="site-header__search"></div>
-      <div class="site-header__phone">
-        <div class="site-header__phone-title">
-          Customer Service
+        </button>
+        <div class="site-header__phone">
+          <div class="site-header__phone-title">
+            Customer Service
+          </div>
+          <div class="site-header__phone-number">
+            (066) 808-5195
+          </div>
         </div>
-        <div class="site-header__phone-number">
-          (066) 808-5195
+      </div>
+      <div class="header__second-area">
+        <div class="container header__second-area-container ">
+          <button id="header__gamburger" class="header__gamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" fill="white">
+              <path d="M0 8V6h18v2H0zm0-8h18v2H0V0zm14 14H0v-2h14v2z"></path>
+            </svg>
+          </button>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Home</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">About</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Cart</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <div id="header__cart" class="header__cart">
+            <div id="header__cart-button" class="header__cart-button"
+                onclick="cart.handleClickOnCart()"></div>
+            <div id="dropcart" class="dropcart"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="header__second-area">
-      <div class="container header__second-area-container ">
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Home</a>
+    </header>
+    <section class="shop-area" id="shop-area">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                itemtype="https://schema.org/ListItem">
+              <a itemprop="item" href="#">
+                <span itemprop="name">Home</span>
+                <meta itemprop="position" content="1" />
+              </a>
+              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="9" class="breadcrumb-arrow">
+                <path d="M.4 8.8c-.4-.4-.5-1-.1-1.4l3-2.9-3-2.9C-.1 1.2-.1.5.4.2c.4-.3.9-.3 1.3.1L6 4.5 1.6 8.7c-.3.4-.9.4-1.2.1z"></path>
+              </svg>
             </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link">About</a>
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                itemtype="https://schema.org/ListItem">
+              <a itemprop="item" href="#">
+                <span itemprop="name">Instruments</span>
+                <meta itemprop="position" content="2" />
+              </a>
+              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="9" class="breadcrumb-arrow">
+                <path d="M.4 8.8c-.4-.4-.5-1-.1-1.4l3-2.9-3-2.9C-.1 1.2-.1.5.4.2c.4-.3.9-.3 1.3.1L6 4.5 1.6 8.7c-.3.4-.9.4-1.2.1z"></path>
+              </svg>
             </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Contacts</a>
-            </li>
+            <li class="breadcrumb-item active">Power Tools</li>
+          </ol>
+        </nav>
+        <h1 class="shop-area__title">Power Tools</h1>
+        <div class="catalog">
+          <div id="shop-area__filters-container">
+            <div class="filters__overlay"></div>
+            <div class="shop-area__sidebar">
+              <div class="shop-area__title-container">
+                <h2 class="shop-area__sidebar-title">Filters</h2>
+                <button type="button" class="filters__close">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                    <path d="M17.71 17.71a.99.99 0 01-1.4 0L10 11.4l-6.31 6.31a.99.99 0 11-1.4-1.4L8.6 10 2.29 3.69a.99.99 0 111.4-1.4L10 8.6l6.31-6.31a.99.99 0 111.4 1.4L11.4 10l6.31 6.31a.99.99 0 010 1.4z"></path>
+                  </svg>
+                </button>
+              </div>
+              <div id="shop-area__filters"></div>
+            </div>
+          </div>
+          
+          <div class="shop-area__catalog-area">
+            <div id="shop-area__sorts-area" class="shop-area__sorts-area"></div>
+            <div id="shop-area__catalog"></div>
+            <div id="shop-area__pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__section">
+            <div class="site-footer__logo">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="196" height="26" fill='white'>
+                  <path d="M194.797 18H184a1 1 0 01-1 1h-1a1 1 0 01-1-1v-2h-2.623a1.5 1.5 0 01-1.442-1.088L173.246 2H168v2h.5a1.5 1.5 0 011.5 1.5v19a1.5 1.5 0 01-1.5 1.5h-3a1.5 1.5 0 01-1.5-1.5v-19a1.5 1.5 0 011.5-1.5h.5V1.5a1.5 1.5 0 011.5-1.5h6.122a1.5 1.5 0 011.443 1.088L178.754 14H181v-1a1 1 0 011-1h1a1 1 0 011 1h10.797c.664 0 1.203.539 1.203 1.203v2.594c0 .664-.539 1.203-1.203 1.203zm-38.014 8h-2.3a1.701 1.701 0 01-1.599-1.122l-2.447-6.743a.205.205 0 00-.192-.135h-7.477a.205.205 0 00-.192.135l-2.447 6.743A1.702 1.702 0 01138.53 26h-2.3a1.205 1.205 0 01-1.13-1.617l8.345-23.261A1.701 1.701 0 01145.044 0h2.925c.716 0 1.354.448 1.599 1.122l8.345 23.261a1.205 1.205 0 01-1.13 1.617zm-8.311-13.275l-1.774-4.877a.203.203 0 00-.383 0l-1.774 4.877a.204.204 0 00.192.275h3.547a.204.204 0 00.192-.275zM130.493 26h-2.403a1.5 1.5 0 01-1.298-.75L122.61 18l-2.607 4.52v1.98c0 .828-.67 1.5-1.498 1.5h-1.998a1.5 1.5 0 01-1.498-1.5v-23a1.5 1.5 0 011.498-1.5h1.998c.828 0 1.498.672 1.498 1.5v11.02L126.792.75A1.5 1.5 0 01128.09 0h2.403c1.153 0 1.874 1.25 1.298 2.25L125.487 13l6.304 10.75c.576 1-.145 2.25-1.298 2.25zm-26.506-10.225V24.5a1.5 1.5 0 01-1.501 1.5h-2.001a1.5 1.5 0 01-1.501-1.5v-8.725l-.39-.675L91.18 2.25c-.57-1 .15-2.25 1.301-2.25h2.311c.53 0 1.031.29 1.301.75l5.393 9.34 5.393-9.34c.27-.46.77-.75 1.3-.75h2.312c1.15 0 1.871 1.25 1.3 2.25l-7.804 13.525zM79 26c-7.179 0-13-5.821-13-13C66 5.82 71.821-.001 79-.001 86.18-.001 92.001 5.82 92.001 13c0 7.179-5.821 13-13.001 13zm0-21a8 8 0 100 16 8 8 0 000-16zM62.793 23.75c.569 1-.15 2.25-1.299 2.25h-2.308c-.53 0-1.029-.29-1.299-.75L53.711 18h-4.706v6.5c0 .83-.67 1.5-1.499 1.5h-1.998c-.829 0-1.499-.67-1.499-1.5v-23c0-.83.67-1.5 1.499-1.5H54c4.966 0 8.992 4.03 8.992 9 0 3.24-1.718 6.09-4.286 7.67l4.087 7.08zM54 5h-3.996c-.55 0-.999.45-.999 1v6c0 .55.449 1 .999 1H54a3.998 3.998 0 003.997-4c0-2.21-1.789-4-3.997-4zM39.5 5H33v19.5a1.5 1.5 0 01-1.5 1.5h-2a1.5 1.5 0 01-1.5-1.5V5h-6.5A1.5 1.5 0 0120 3.5v-2A1.5 1.5 0 0121.5 0h18A1.5 1.5 0 0141 1.5v2A1.5 1.5 0 0139.5 5zM16.487 8h-2.306c-.616 0-1.141-.389-1.391-.952C12.261 5.856 10.765 5 9 5 6.793 5 5.005 6.34 5.005 8c0 .94.57 1.78 1.478 2.32.223.135.465.254.723.353a1.492 1.492 0 01.749 2.139l-1.007 1.746c-.375.65-1.18.941-1.868.643A8.843 8.843 0 011.989 13C.751 11.63.012 9.89.012 8 .012 3.58 4.037 0 9 0c4.254 0 8.017 2.629 8.95 6.163.246.932-.5 1.837-1.463 1.837zM1.513 18H3.82c.615 0 1.14.389 1.39.952C5.739 20.144 7.236 21 9 21c2.207 0 3.995-1.34 3.995-3 0-.94-.569-1.78-1.478-2.32a4.448 4.448 0 00-.723-.353 1.493 1.493 0 01-.749-2.139l1.008-1.746c.374-.65 1.18-.941 1.867-.643A8.817 8.817 0 0116.011 13c1.238 1.37 1.977 3.11 1.977 5 0 4.42-4.024 8-8.988 8-4.253 0-8.017-2.629-8.95-6.163C-.196 18.905.55 18 1.513 18z"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="footer-contacts__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in feugiat lorem.
+            </div>
+            <ul class="footer-contacts__list">
+              <li class="footer-contacts__item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#b3b3b3" width="16" height="16" viewBox="0 0 503.604 503.604" xml:space="preserve">
+                  <path d="M337.324,0H167.192c-28.924,0-53.5,23.584-53.5,52.5v398.664c0,28.916,24.056,52.44,52.98,52.44l170.412-0.184    c28.92,0,52.58-23.528,52.58-52.448l0.248-398.5C389.908,23.452,366.364,0,337.324,0z M227.68,31.476h49.36    c4.336,0,7.868,3.52,7.868,7.868c0,4.348-3.532,7.868-7.868,7.868h-49.36c-4.348,0-7.868-3.52-7.868-7.868    C219.812,34.996,223.332,31.476,227.68,31.476z M198.02,33.98c2.916-2.912,8.224-2.952,11.136,0c1.46,1.456,2.324,3.5,2.324,5.588    c0,2.048-0.864,4.088-2.324,5.548c-1.452,1.46-3.504,2.32-5.548,2.32c-2.084,0-4.088-0.86-5.588-2.32    c-1.452-1.456-2.28-3.5-2.28-5.548C195.736,37.48,196.568,35.436,198.02,33.98z M250.772,488.008    c-12.984,0-23.544-10.568-23.544-23.548c0-12.984,10.56-23.548,23.544-23.548s23.544,10.564,23.544,23.548    C274.316,477.44,263.752,488.008,250.772,488.008z M365.488,424.908H141.232V74.756h224.256V424.908z"/>
+                </svg>
+                  (066) 808-5195, (800) 060-0730
+              </li>
+              <li class="footer-contacts__item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#b3b3b3" width="16" height="16" viewBox="0 0 426.667 426.667" xml:space="preserve">
+                    <path d="M213.227,0C95.36,0,0,95.467,0,213.333s95.36,213.333,213.227,213.333s213.44-95.467,213.44-213.333S331.093,0,213.227,0z     M213.333,384c-94.293,0-170.667-76.373-170.667-170.667S119.04,42.667,213.333,42.667S384,119.04,384,213.333    S307.627,384,213.333,384z"/>
+                    <polygon points="224,218.667 224,106.667 192,106.667 192,234.667 303.893,301.867 320,275.627"/>
+                </svg>
+                Mon-Sat 10:00pm - 7:00pm
+              </li>
+            </ul>
+          </div>
+          <div class="footer__section">
+            <div class="footer_section-block">
+              <h5 class="footer__info-title">Information</h5>
+              <ul class="footer__info-nav-list">
+                <li class="footer__info-nav-item">
+                  <a href="#">Home</a>
+                </li>
+                <li class="footer__info-nav-item">
+                  <a href="#">About</a>
+                </li>
+                <li class="footer__info-nav-item">
+                  <a href="#">Cart</a>
+                </li>
+                <li class="footer__info-nav-item">
+                  <a href="#">Contacts</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__coryright">
+              © STROYKA, 2020. All rights reserved
+            </div>
+          </div>
+          <div class="footer__section">
+            <div class="footer__creator-container">
+              <div class="footer__creator-letter">S</div>
+              <div class="footer__creator">
+                <div class="footer__creator-intro">
+                  Design creation
+                </div>
+                <div class="footer__creator-name">
+                  Stroyka Envato
+                </div>
+              </div>
+            </div>
+            <div class="footer__creator-container">
+              <div class="footer__creator-letter">P</div>
+              <div class="footer__creator">
+                <div class="footer__creator-intro">
+                  Project development
+                </div>
+                <div class="footer__creator-name">
+                  Pavel Simonov
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__section">
+            <h5 class="footer__info-title">Payment systems</h5>
+            <img src="https://stroyka.vue.themeforest.scompiler.ru/themes/black/images/payments.png" alt="pay" class="footer__payment">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="mobilemenu" class="mobilemenu">
+      <div class="mobilemenu__overlay"></div>
+      <div class="mobilemenu__body">
+        <div class="mobilemenu__header">
+          <div class="mobilemenu__title">Menu</div>
+          <button type="button" class="mobilemenu__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+              <path d="M17.71 17.71a.99.99 0 01-1.4 0L10 11.4l-6.31 6.31a.99.99 0 11-1.4-1.4L8.6 10 2.29 3.69a.99.99 0 111.4-1.4L10 8.6l6.31-6.31a.99.99 0 111.4 1.4L11.4 10l6.31 6.31a.99.99 0 010 1.4z"></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobilemenu__nav">
+          <ul class="mobilemenu__list">
+            <li class="mobilemenu__item">Home</li>
+            <li class="mobilemenu__item">About</li>
+            <li class="mobilemenu__item">Cart</li>
+            <li class="mobilemenu__item">Contacts</li>
           </ul>
         </nav>
-        <div id="header__cart" class="header__cart">
-          <div id="header__cart-button" class="header__cart-button"
-               onclick="cart.handleClickOnCart()"></div>
-          <div id="dropcart" class="dropcart"></div>
-        </div>
       </div>
     </div>
-  </header>
-  <section class="shop-area" id="shop-area">
-    <div class="container">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#" class="nuxt-link-active">Home</a>
-            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="9" class="breadcrumb-arrow">
-              <path d="M.4 8.8c-.4-.4-.5-1-.1-1.4l3-2.9-3-2.9C-.1 1.2-.1.5.4.2c.4-.3.9-.3 1.3.1L6 4.5 1.6 8.7c-.3.4-.9.4-1.2.1z"></path>
-            </svg>
-          </li>
-          <li class="breadcrumb-item">
-            <a href="#" class="">Instruments</a>
-            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="9" class="breadcrumb-arrow">
-              <path d="M.4 8.8c-.4-.4-.5-1-.1-1.4l3-2.9-3-2.9C-.1 1.2-.1.5.4.2c.4-.3.9-.3 1.3.1L6 4.5 1.6 8.7c-.3.4-.9.4-1.2.1z"></path>
-            </svg>
-          </li>
-          <li class="breadcrumb-item active">Power Tools</li>
-        </ol>
-      </nav>
-      <h1 class="shop-area__title">Power Tools</h1>
-      <div class="catalog">
-        <div class="shop-area__sidebar">
-          <h2 class="shop-area__sidebar-title">Filters</h2>
-          <div id="shop-area__filters"></div>
-        </div>
-        <div class="shop-area__catalog-area">
-          <div id="shop-area__sorts-area" class="shop-area__sorts-area"></div>
-          <div id="shop-area__catalog"></div>
-          <div id="shop-area__pagination"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="container footer__container">
 
-  </footer>
+    <!--  Utils  -->
+    <script src="js/catalog.js"></script>
+    <script src="js/localStorageUtil.js"></script>
 
-  <!--  Utils  -->
-  <script src="js/localStorageUtil.js"></script>
+    <!--  Pagination  -->
+    <script src="js/pagination.js"></script>
+    <link rel="stylesheet" href="css/pagination.css">
 
-  <!--  Pagination  -->
-  <script src="js/pagination.js"></script>
-  <link rel="stylesheet" href="css/pagination.css">
+    <!--  Search  -->
+    <script src="js/search.js"></script>
+    <link rel="stylesheet" href="css/search.css">
 
-  <!--  Search  -->
-  <script src="js/search.js"></script>
-  <link rel="stylesheet" href="css/search.css">
+    <!--  Filter  -->
+    <script src="js/filter.js"></script>
+    <link rel="stylesheet" href="css/filter.css">
 
-  <!--  Filter  -->
-  <script src="js/filter.js"></script>
-  <link rel="stylesheet" href="css/filter.css">
+    <!-- sortAndShow -->
+    <script src="js/sortAndShow.js"></script>
+    <link rel="stylesheet" href="css/sorts.css">
 
-  <!-- sortAndShow -->
-  <script src="js/sortAndShow.js"></script>
-  <link rel="stylesheet" href="css/sorts.css">
+    <!--  Products  -->
+    <script src="js/products.js"></script>
+    <link rel="stylesheet" href="css/products.css">
 
-  <!--  Products  -->
-  <script src="js/products.js"></script>
-  <link rel="stylesheet" href="css/products.css">
+    <!--  Cart  -->
+    <script src="js/cart.js"></script>
+    <link rel="stylesheet" href="css/cart.css">
 
-  <!--  Cart  -->
-  <script src="js/cart.js"></script>
-  <link rel="stylesheet" href="css/cart.css">
-
-  <script src="js/script.js"></script>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
