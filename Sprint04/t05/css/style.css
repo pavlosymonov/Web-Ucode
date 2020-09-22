@@ -1,0 +1,55 @@
+body {
+  font-family: 'Caveat', cursive;
+  padding: 30px calc((100vw - 1170px) / 2);
+  margin: 0;
+  color: #49483F;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+hr {
+  background: #7C7967;
+  height: 1px;
+  border: none;
+  margin: 4px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-container {
+  background-color: #f3eccb;
+  box-shadow: inset 0 0 20px 5px #F4BF4B;
+  width: 300px;
+  padding: 35px;
+}
+
+.menu-item {
+  margin-bottom: 25px;
+  color: #7C7967;
+}
+
+.menu-item__title {
+  text-transform: capitalize;
+}
+
+.menu-sub-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  margin-bottom: 3px;
+}
+
+.menu-sub-item__title {
+  text-transform: capitalize;
+}

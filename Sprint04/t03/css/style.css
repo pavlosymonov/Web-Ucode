@@ -1,0 +1,31 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+#container {
+  width: 100vw;
+  height: 100vh;
+}
+.box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  cursor: move;
+  box-sizing: border-box;
+}
+.box:hover {
+  filter: saturate(.5);
+}
+.box[value="off"] {
+  border: 2px dashed #333;
+}
+.box[value="off"]:hover {
+  filter: none;
+}
+.box:nth-child(1) {background-color: coral;}
+.box:nth-child(2) {background-color: cornflowerblue;left: 170px}
+.box:nth-child(3) {background-color: crimson;left: calc(165px * 2)}
+.box:nth-child(4) {background-color: darkcyan;left: calc(165px * 3)}
+.box:nth-child(5) {background-color: darkkhaki;left: calc(165px * 4)}
+.box:nth-child(6) {background-color: darkorchid;left: calc(165px * 5)}
