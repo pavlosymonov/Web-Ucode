@@ -1,8 +1,9 @@
-function setPosition(position) {
+async function setPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
 
-  getWeather(latitude, longitude);
+  const weather = await getWeather(latitude, longitude);
+  setWeather(weather);
 }
 
 function showError(error) {
@@ -20,25 +21,23 @@ function getDate(sec) {
   return `${day}.${month}`;
 }
 
-function getWeather(latitude, longitude) {
+async function getWeather(latitude, longitude) {
   let api = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=current,minutely,hourly,alerts&appid=${apiKey}`;
+  const response = await fetch(api);
+  const data = await response.json();
+  const t = data.timezone;
 
-  fetch(api).then(response => response.json()).then(data => {
-    const t = data.timezone;
+  return data.daily.map(day => {
+    const date = getDate(day.dt);
+    const temperature = Math.floor(day.temp.day - KELVIN);
+    const description = day.weather[0].description;
+    const iconId = day.weather[0].icon;
 
-    data.daily.forEach(day => {
-      const date = getDate(day.dt);
-      const temperature = Math.floor(day.temp.day - KELVIN);
-      const description = day.weather[0].description;
-      const iconId = day.weather[0].icon;
-
-      weather.push(new DailyWeather(date, temperature, description, iconId, t));
-    });
-    setWeather();
+    return new DailyWeather(date, temperature, description, iconId, t);
   });
 }
 
-function setWeather() {
+function setWeather(weather) {
   weather.forEach(el => {
     weatherParent.innerHTML += `
     <div class="weather-item">
@@ -65,8 +64,6 @@ class DailyWeather {
     this.timeZone = zone;
   }
 }
-
-let weather = [];
 
 const KELVIN = 273;
 // API KEY
