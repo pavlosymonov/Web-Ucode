@@ -1,0 +1,69 @@
+body {
+  font-family: 'Baloo Tammudu 2', cursive;
+  background: #2A3051;
+  color: #2B3052;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+}
+
+#weather {
+  display: grid;
+  grid-template-columns: repeat(4, 290px);
+  grid-gap: 30px;
+  justify-content: space-around;
+}
+
+.weather-item {
+  border-radius: 15px;
+  text-align: center;
+  background: #fff;
+  padding: 5px 0 45px;
+}
+
+.weather-item__content {
+  background: #f4f9ff;
+  padding-bottom: 12px;
+}
+
+.weather-item__date p {
+  margin: 0;
+  line-height: 1;
+  font-size: 25px;
+  padding: 16px 0 7px;
+}
+
+.weather-item__value {
+  font-size: 68px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.weather-item__value span {
+  font-size: 35px;
+}
+
+.weather-item__desc {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.error {
+  grid-column: span 4;
+  color: #2a3051;
+  font-size: 23px;
+  background: #efd7d7;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1;
+  padding: 30px 0 21px;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+
+.weather-item__timezone {
+  line-height: 1;
+  margin-top: 4px;
+}

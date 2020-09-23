@@ -6,10 +6,30 @@ let user = {
 
 // Don't edit above this line
 
+function nameCheck(value) {
+  return value
+    .replace(/\s+/g, ' ')
+    .trim()
+    .split(' ')
+    .map(el => el.charAt(0).toUpperCase() + el.slice(1))
+    .join(' ');
+}
+
+function checkProp(value, oldValue, reg) {
+  return reg.test(value) ? value : oldValue;
+}
+
+let regEmail = /^([\w.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/,
+  regAge = /[1-999]/;
+
 user = new Proxy(user, {
   set (target, prop, val) {
-    if (prop == 'name' && val) {
-
+    if (prop == 'name') {
+      target[prop] = nameCheck(val);
+    } else if (prop == 'age') {
+      target[prop] = checkProp(val, target[prop], regAge);
+    } else if (prop == 'email') {
+      target[prop] = checkProp(val, target[prop], regEmail);
     }
   }
 });
