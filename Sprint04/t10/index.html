@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super-stats</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1 class="title">Super-stats</h1>
+  <p class="text">
+    Сompare statistics of different superheroes.<br>
+    Find superheroes to compare using search, or click 'Random' button to select a random superhero.<br>
+    Once you have selected all the heroes you want to compare, click 'Compare'!
+  </p>
+  <div class="form">
+    <input id="search-input" type="text" placeholder="search for a superhero">
+    <button onclick="searchHeroes()" class="btn">Search</button>
+    <button class="btn">Random</button>
+    <button class="btn">Compare <span id="compare-length">0</span></button>
+  </div>
+  <h2 class="title">Search Results</h2>
+  <p>(click to add to comparison)</p>
+  <div id="heroes"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
