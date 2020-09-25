@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Super-stats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,12 +17,20 @@
   <div class="form">
     <input id="search-input" type="text" placeholder="search for a superhero">
     <button onclick="searchHeroes()" class="btn">Search</button>
-    <button class="btn">Random</button>
-    <button class="btn">Compare <span id="compare-length">0</span></button>
+    <button onclick="randomHero()" class="btn">Random</button>
+    <button onclick="compareHeroes()" class="btn">Compare <span id="compare-length">0</span></button>
   </div>
   <h2 class="title">Search Results</h2>
-  <p>(click to add to comparison)</p>
+  <div class="cont">
+    <p>(click to add to comparison)<div class="loader"></div></p>
+  </div>
   <div id="heroes"></div>
+  <div class="chart-area">
+    <div id="chart" style="width: 800px; height: 400px;"></div>
+    <div id="chart-stats"></div>
+  </div>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="js/chars.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
