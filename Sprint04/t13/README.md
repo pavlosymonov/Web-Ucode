@@ -1,6 +1,8 @@
-# Task 13. Todo app.
+# Task 13. To-Do List App
 
-For the application to work, you need to install all the dependencies, enter in the console: `npm install`
+For the application to work, you need to install all the dependencies, enter in the console:
+
+### `npm install`
 
 ## Available Scripts
 

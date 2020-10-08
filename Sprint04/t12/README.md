@@ -1,6 +1,8 @@
-# Task 12. Hello world app.
+# Task 12. Hello React App
 
-For the application to work, you need to install all the dependencies, enter in the console: `npm install`
+For the application to work, you need to install all the dependencies, enter in the console:
+
+### `npm install`
 
 ## Available Scripts
 
