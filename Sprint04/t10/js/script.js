@@ -55,28 +55,6 @@ function compareHeroes() {
   heroesParent.innerHTML = '';
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 async function addToCompare(btn) {
   if (compareList.size < 20) {
     const key = btn.getAttribute('data-id');
@@ -110,8 +88,15 @@ function showHero(hero) {
 }
 
 async function getData(req) {
-  const response = await fetch(cors + api + req);
-  const data = await response.json();
+  let response = null, data = null;
+
+  try {
+    response = await fetch(cors + api + req);
+    data = await response.json();
+  } catch (error) {
+    alert(error);
+    return null;
+  }
 
   if (data.response === 'error') {
     alert(data.error);
@@ -126,4 +111,3 @@ function getRandomNumber() {
 
   return Math.floor(Math.random() * (maxId - minId) + minId);
 }
-
