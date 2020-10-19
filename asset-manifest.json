@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Web-Ucode/tree/master/usof/static/css/main.05640100.chunk.css",
+    "main.js": "/Web-Ucode/tree/master/usof/static/js/main.f5ffc43d.chunk.js",
+    "main.js.map": "/Web-Ucode/tree/master/usof/static/js/main.f5ffc43d.chunk.js.map",
+    "runtime-main.js": "/Web-Ucode/tree/master/usof/static/js/runtime-main.f1137537.js",
+    "runtime-main.js.map": "/Web-Ucode/tree/master/usof/static/js/runtime-main.f1137537.js.map",
+    "static/js/2.6a8ea22d.chunk.js": "/Web-Ucode/tree/master/usof/static/js/2.6a8ea22d.chunk.js",
+    "static/js/2.6a8ea22d.chunk.js.map": "/Web-Ucode/tree/master/usof/static/js/2.6a8ea22d.chunk.js.map",
+    "index.html": "/Web-Ucode/tree/master/usof/index.html",
+    "precache-manifest.5cfee0595611e87a1113d36599fc2a49.js": "/Web-Ucode/tree/master/usof/precache-manifest.5cfee0595611e87a1113d36599fc2a49.js",
+    "service-worker.js": "/Web-Ucode/tree/master/usof/service-worker.js",
+    "static/css/main.05640100.chunk.css.map": "/Web-Ucode/tree/master/usof/static/css/main.05640100.chunk.css.map",
+    "static/js/2.6a8ea22d.chunk.js.LICENSE.txt": "/Web-Ucode/tree/master/usof/static/js/2.6a8ea22d.chunk.js.LICENSE.txt",
+    "static/media/logo-stackoverflow.svg": "/Web-Ucode/tree/master/usof/static/media/logo-stackoverflow.a613aa26.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f1137537.js",
+    "static/js/2.6a8ea22d.chunk.js",
+    "static/css/main.05640100.chunk.css",
+    "static/js/main.f5ffc43d.chunk.js"
+  ]
+}
