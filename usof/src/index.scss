@@ -1,0 +1,21 @@
+html, body {
+	color: #242729;
+	font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+	font-size: 13px;
+	line-height: 1.30769231;
+}
+
+ul, li, p,
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+ul, li {
+	display: block;
+  list-style: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
